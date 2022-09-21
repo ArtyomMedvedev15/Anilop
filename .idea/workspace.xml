@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Base library">
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Base library for work">
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
       <workItem from="1663612566808" duration="2929000" />
-      <workItem from="1663777761441" duration="988000" />
+      <workItem from="1663777761441" duration="2167000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1663612813876</created>
@@ -95,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663614855411</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Base library for work">
+      <created>1663779091330</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663779091330</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Base library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base library" />
+    <MESSAGE value="Base library for work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base library for work" />
   </component>
 </project>
