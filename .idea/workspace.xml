@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Domain for auth">
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/UserRepo.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Repositories">
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
       <workItem from="1663612566808" duration="2929000" />
-      <workItem from="1663777761441" duration="2485000" />
+      <workItem from="1663777761441" duration="2992000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1663612813876</created>
@@ -107,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663780064157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Repositories">
+      <created>1663780260664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663780260664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +137,7 @@
     <MESSAGE value="Base library" />
     <MESSAGE value="Base library for work" />
     <MESSAGE value="Domain for auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Domain for auth" />
+    <MESSAGE value="Repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repositories" />
   </component>
 </project>
