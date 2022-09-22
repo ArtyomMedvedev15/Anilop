@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Repositories">
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepo.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="User service">
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/api/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +46,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "spring.configuration.checksum": "4c9eb2c80a503b7c30ef8277e13faaa5"
+    "spring.configuration.checksum": "dc84e459d36f509ad2ea532cee06faf3"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -78,7 +92,8 @@
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
       <workItem from="1663612566808" duration="2929000" />
-      <workItem from="1663777761441" duration="2992000" />
+      <workItem from="1663777761441" duration="3485000" />
+      <workItem from="1663854610231" duration="2748000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1663612813876</created>
@@ -115,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663780260664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="User service">
+      <created>1663780770849</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663780770849</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +160,7 @@
     <MESSAGE value="Base library for work" />
     <MESSAGE value="Domain for auth" />
     <MESSAGE value="Repositories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repositories" />
+    <MESSAGE value="User service" />
+    <option name="LAST_COMMIT_MESSAGE" value="User service" />
   </component>
 </project>
