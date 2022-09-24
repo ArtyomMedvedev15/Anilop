@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="User service">
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/api/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Rest controller with main endpoint">
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/filter/CustomAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/repository/RoleRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,25 +41,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "spring.configuration.checksum": "dc84e459d36f509ad2ea532cee06faf3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;dc84e459d36f509ad2ea532cee06faf3&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="UserserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="AuthenticationService" />
@@ -93,7 +89,8 @@
       <updated>1663612562151</updated>
       <workItem from="1663612566808" duration="2929000" />
       <workItem from="1663777761441" duration="3485000" />
-      <workItem from="1663854610231" duration="2748000" />
+      <workItem from="1663854610231" duration="4330000" />
+      <workItem from="1664050980765" duration="705000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1663612813876</created>
@@ -137,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663780770849</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Rest controller with main endpoint">
+      <created>1663857555502</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663857555502</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +165,7 @@
     <MESSAGE value="Domain for auth" />
     <MESSAGE value="Repositories" />
     <MESSAGE value="User service" />
-    <option name="LAST_COMMIT_MESSAGE" value="User service" />
+    <MESSAGE value="Rest controller with main endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest controller with main endpoint" />
   </component>
 </project>
