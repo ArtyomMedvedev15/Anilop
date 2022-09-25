@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Base security config">
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="JWT token generate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/filter/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/filter/CustomAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/domain/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +89,7 @@
       <workItem from="1663777761441" duration="3485000" />
       <workItem from="1663854610231" duration="4330000" />
       <workItem from="1664050980765" duration="1569000" />
-      <workItem from="1664094268063" duration="2215000" />
+      <workItem from="1664094268063" duration="3801000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1663612813876</created>
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664051993026</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="JWT token generate">
+      <created>1664096569027</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664096569027</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +180,7 @@
     <MESSAGE value="User service" />
     <MESSAGE value="Rest controller with main endpoint" />
     <MESSAGE value="Base security config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base security config" />
+    <MESSAGE value="JWT token generate" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT token generate" />
   </component>
 </project>
