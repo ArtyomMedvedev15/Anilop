@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Rest controller with main endpoint">
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/filter/CustomAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/security/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Base security config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/UserserviceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/filter/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/filter/CustomAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/java/com/authtenticaionservice/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthenticationService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,8 @@
       <workItem from="1663612566808" duration="2929000" />
       <workItem from="1663777761441" duration="3485000" />
       <workItem from="1663854610231" duration="4330000" />
-      <workItem from="1664050980765" duration="705000" />
+      <workItem from="1664050980765" duration="1569000" />
+      <workItem from="1664094268063" duration="2215000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <created>1663612813876</created>
@@ -141,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663857555502</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Base security config">
+      <created>1664051993026</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664051993026</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +175,7 @@
     <MESSAGE value="Repositories" />
     <MESSAGE value="User service" />
     <MESSAGE value="Rest controller with main endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rest controller with main endpoint" />
+    <MESSAGE value="Base security config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base security config" />
   </component>
 </project>

@@ -27,9 +27,7 @@ public class UserserviceApplication {
     CommandLineRunner runner(UserService userService){
         return args -> {
             userService.saveRole(new Role(null,"ROLE_USER"));
-            userService.saveRole(new Role(null,"ROLE_MANAGER"));
             userService.saveRole(new Role(null,"ROLE_ADMIN"));
-            userService.saveRole(new Role(null,"ROLE_SUPER_ADMIN"));
 
             userService.saveUser(AppUser.builder()
                     .id(null)
