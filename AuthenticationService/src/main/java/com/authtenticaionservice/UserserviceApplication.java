@@ -23,27 +23,27 @@ public class UserserviceApplication {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    CommandLineRunner runner(UserService userService){
-        return args -> {
-            userService.saveRole(new Role(null,"ROLE_USER"));
-            userService.saveRole(new Role(null,"ROLE_ADMIN"));
-
-            userService.saveUser(AppUser.builder()
-                    .id(null)
-                    .name("Tim")
-                    .username("Tim01")
-                    .password("12345678")
-                    .roles(new ArrayList<>()).build());
-            userService.saveUser(AppUser.builder()
-                    .id(null)
-                    .name("Jon")
-                    .username("Jon01")
-                    .password("12345678")
-                    .roles(new ArrayList<>()).build());
-
-            userService.addRoleToUser("Tim01","ROLE_USER");
-            userService.addRoleToUser("Jon01","ROLE_ADMIN");
-        };
-    }
+//    @Bean
+//    CommandLineRunner runner(UserService userService){
+//        return args -> {
+//            userService.saveRole(new Role(null,"ROLE_USER"));
+//            userService.saveRole(new Role(null,"ROLE_ADMIN"));
+//
+//            userService.saveUser(AppUser.builder()
+//                    .id(null)
+//                    .name("Tim")
+//                    .username("Tim01")
+//                    .password("12345678")
+//                    .roles(new ArrayList<>()).build());
+//            userService.saveUser(AppUser.builder()
+//                    .id(null)
+//                    .name("Jon")
+//                    .username("Jon01")
+//                    .password("12345678")
+//                    .roles(new ArrayList<>()).build());
+//
+//            userService.addRoleToUser("Tim01","ROLE_USER");
+//            userService.addRoleToUser("Jon01","ROLE_ADMIN");
+//        };
+//    }
 }
