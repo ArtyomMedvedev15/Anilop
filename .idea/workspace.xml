@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Add base dependencies for Hobbies">
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Hobby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/pom.xml" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby repository created">
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/HobbyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -79,7 +76,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666200847446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Base entity created">
+      <created>1666201516872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666201516872</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Hobby repository created">
+      <created>1666201622383</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666201622383</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,7 +106,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add base dependencies for Hobbies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add base dependencies for Hobbies" />
+    <MESSAGE value="Base entity created" />
+    <MESSAGE value="Hobby repository created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hobby repository created" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
