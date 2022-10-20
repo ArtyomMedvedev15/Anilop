@@ -2,16 +2,17 @@ package com.hobbiesservice.service.implementation;
 
 import com.hobbiesservice.domain.Hobby;
 import com.hobbiesservice.domain.Type;
+import com.hobbiesservice.dto.HobbyRequest;
+import com.hobbiesservice.dto.HobbyResponse;
 import com.hobbiesservice.repository.HobbyRepository;
 import com.hobbiesservice.service.api.HobbyService;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Service
 @Slf4j
 public class HobbyServiceImpl implements HobbyService {
@@ -19,9 +20,19 @@ public class HobbyServiceImpl implements HobbyService {
     private final HobbyRepository hobbyRepository;
 
     @Override
-    public Hobby createHobby(Hobby hobbyCreate) {
-        log.info("Create hobby - {}",hobbyCreate);
-        return hobbyRepository.save(hobbyCreate);
+    public Hobby createHobby(HobbyRequest hobbyRequest) {
+        Hobby hobby = Hobby.builder()
+                .name(hobbyRequest.getName())
+                .describe(hobbyRequest.getDescribe())
+                .duration(hobbyRequest.getDuration())
+                .logoPath(hobbyRequest.getLogoPath())
+                .type(hobbyRequest.getType())
+                .author_id(hobbyRequest.getAuthor_id())
+                .rating(hobbyRequest.getRating())
+                .build();
+
+        log.info("Create hobby - {}",hobby.getId());
+        return hobbyRepository.save(hobby);
     }
 
     @Override
@@ -43,9 +54,24 @@ public class HobbyServiceImpl implements HobbyService {
     }
 
     @Override
-    public List<Hobby> getAllHobbies() {
+    public List<HobbyResponse> getAllHobbies() {
         log.info("Get all hobbies");
-        return hobbyRepository.findAll();
+        List<Hobby>hobbies = hobbyRepository.findAll();
+        return hobbies.stream().map(this::mapToHobbyResponse).toList();
+    }
+
+    private HobbyResponse mapToHobbyResponse(Hobby hobby) {
+        return HobbyResponse.builder()
+                .id(hobby.getId())
+                .created(hobby.getCreated())
+                .name(hobby.getName())
+                .describe(hobby.getDescribe())
+                .duration(hobby.getDuration())
+                .rating(hobby.getRating())
+                .logoPath(hobby.getLogoPath())
+                .author_id(hobby.getAuthor_id())
+                .type(hobby.getType())
+                .build();
     }
 
     @Override
@@ -65,4 +91,5 @@ public class HobbyServiceImpl implements HobbyService {
         log.info("Find all hobby with author id - {}",idAuthor);
         return hobbyRepository.findAll().stream().filter(o1->o1.getAuthor_id().equals(idAuthor)).toList();
     }
+
 }

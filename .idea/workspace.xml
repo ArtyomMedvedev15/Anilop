@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Author service implementation">
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/AppMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/rest/AuthorRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/domain/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/domain/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/domain/BaseDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/domain/BaseDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/domain/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/domain/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/repository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/service/api/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/service/api/AuthorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/service/implementation/AuthorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/service/implementation/AuthorServiceImpl.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Author rest endpoint">
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="auth_with_api_key" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -66,6 +68,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hobbiesservice.dto" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="U:\Work\Anilop\AuthorService\src\main\resources" />
     </key>
@@ -115,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1666274235367" duration="2586000" />
+      <workItem from="1666274235367" duration="5315000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -187,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666276554359</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Author rest endpoint">
+      <created>1666276949821</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666276949821</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +227,8 @@
     <MESSAGE value="Author repository create" />
     <MESSAGE value="Author service api create" />
     <MESSAGE value="Author service implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Author service implementation" />
+    <MESSAGE value="Author rest endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Author rest endpoint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

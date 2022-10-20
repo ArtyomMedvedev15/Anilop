@@ -1,13 +1,14 @@
 package com.hobbiesservice.rest;
 
 import com.hobbiesservice.domain.Hobby;
+import com.hobbiesservice.dto.HobbyRequest;
+import com.hobbiesservice.dto.HobbyResponse;
 import com.hobbiesservice.service.api.HobbyService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,9 +21,17 @@ public class HobbyRestController {
     private final HobbyService hobbyService;
 
     @GetMapping("/hobbies")
-    public ResponseEntity<List<Hobby>>getAll(){
+    @ResponseStatus(HttpStatus.OK)
+    public List<HobbyResponse>getAll(){
         log.info("Get all hobbies with endpoint");
-        return ResponseEntity.ok().body(hobbyService.getAllHobbies());
+        return hobbyService.getAllHobbies();
     }
+
+    @PostMapping("/create")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createHobby(@RequestBody HobbyRequest hobbyRequest){
+        hobbyService.createHobby(hobbyRequest);
+    }
+
 
 }
