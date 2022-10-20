@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby service api">
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby service implementation">
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Hobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Hobby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,6 +51,11 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
     "spring.configuration.checksum": "db5d9912c3b193573ac1aa00aa725408"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -79,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1666274235367" duration="420000" />
+      <workItem from="1666274235367" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -109,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666201966755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Hobby service implementation">
+      <created>1666274862135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666274862135</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +145,8 @@
     <MESSAGE value="Base entity created" />
     <MESSAGE value="Hobby repository created" />
     <MESSAGE value="Hobby service api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hobby service api" />
+    <MESSAGE value="Hobby service implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hobby service implementation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
