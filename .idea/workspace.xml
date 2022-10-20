@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby rest api and application properties">
-      <change afterPath="$PROJECT_DIR$/AuthorService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create domain in author service">
+      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/java/repository/AuthorRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +15,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,6 +44,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "spring.configuration.checksum": "db5d9912c3b193573ac1aa00aa725408"
   },
   "keyToStringList": {
@@ -85,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1666274235367" duration="1313000" />
+      <workItem from="1666274235367" duration="1631000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -129,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666275308660</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create domain in author service">
+      <created>1666275825801</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666275825801</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +158,8 @@
     <MESSAGE value="Hobby service api" />
     <MESSAGE value="Hobby service implementation" />
     <MESSAGE value="Hobby rest api and application properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hobby rest api and application properties" />
+    <MESSAGE value="Create domain in author service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create domain in author service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
