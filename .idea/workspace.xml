@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create domain in author service">
-      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/java/repository/AuthorRepository.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Author service api create">
+      <change afterPath="$PROJECT_DIR$/AuthorService/src/main/java/service/implementation/AuthorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/service/api/AuthorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1666274235367" duration="1631000" />
+      <workItem from="1666274235367" duration="2067000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -139,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666275825801</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Author repository create">
+      <created>1666275876923</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666275876923</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Author service api create">
+      <created>1666276036239</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666276036239</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +179,9 @@
     <MESSAGE value="Hobby service implementation" />
     <MESSAGE value="Hobby rest api and application properties" />
     <MESSAGE value="Create domain in author service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create domain in author service" />
+    <MESSAGE value="Author repository create" />
+    <MESSAGE value="Author service api create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Author service api create" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

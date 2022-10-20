@@ -1,4 +1,4 @@
-package service;
+package service.api;
 
 import domain.Author;
 
@@ -10,6 +10,5 @@ public interface AuthorService {
     void deleteAuthor(Author authorDelete);
     Author getAuthorById(Long idAuthor);
     List<Author>getAllAuthors();
-    Integer getAverageRatingAuthor();
     List<Author>findAuthorByName(String nameAuthor);
 }
