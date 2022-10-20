@@ -55,6 +55,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="domain" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="AppMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="HobbiesService" />
