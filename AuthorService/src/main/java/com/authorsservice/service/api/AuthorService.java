@@ -1,6 +1,6 @@
-package service.api;
+package com.authorsservice.service.api;
 
-import domain.Author;
+import com.authorsservice.domain.Author;
 
 import java.util.List;
 

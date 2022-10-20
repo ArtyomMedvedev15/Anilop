@@ -1,4 +1,4 @@
-package domain;
+package com.authorsservice.domain;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

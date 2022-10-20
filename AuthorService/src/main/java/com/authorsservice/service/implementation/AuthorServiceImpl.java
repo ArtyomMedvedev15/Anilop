@@ -1,12 +1,12 @@
-package service.implementation;
+package com.authorsservice.service.implementation;
 
-import domain.Author;
+import com.authorsservice.domain.Author;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import repository.AuthorRepository;
-import service.api.AuthorService;
+import com.authorsservice.repository.AuthorRepository;
+import com.authorsservice.service.api.AuthorService;
 
 import java.util.List;
 
@@ -16,7 +16,6 @@ import java.util.List;
 public class AuthorServiceImpl implements AuthorService {
 
     private final AuthorRepository authorRepository;
-    private final RestTemplate restTemplate;
 
     @Override
     public Author createAuthor(Author authorCreate) {
