@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby repository created">
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/HobbyService.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby service api">
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Hobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/domain/Hobby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +19,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EzyA1bEYjlbkia6OeGuTVxVoaI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,8 +45,10 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-18"
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "spring.configuration.checksum": "db5d9912c3b193573ac1aa00aa725408"
   }
 }]]></component>
   <component name="RunManager">
@@ -64,10 +74,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby service api" />
       <created>1663612562151</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
+      <workItem from="1666274235367" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -90,8 +102,18 @@
       <option name="project" value="LOCAL" />
       <updated>1666201622383</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Hobby service api">
+      <created>1666201966755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666201966755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -108,7 +130,8 @@
     <MESSAGE value="Add base dependencies for Hobbies" />
     <MESSAGE value="Base entity created" />
     <MESSAGE value="Hobby repository created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hobby repository created" />
+    <MESSAGE value="Hobby service api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hobby service api" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

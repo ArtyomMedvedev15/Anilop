@@ -22,7 +22,7 @@ public class Hobby extends BaseDomain {
     private String describe;
     private Date duration;
     private String logoPath;
-    private Long typeId;
+    private Type type;
     private Long author_id;
     @ColumnDefault("0")
     private Integer rating;
