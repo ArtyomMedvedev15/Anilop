@@ -23,5 +23,6 @@ public class HobbyResponse {
     private Long author_id;
     private Integer rating;
     private Date created;
+    private Date updated;
 
 }

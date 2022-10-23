@@ -2,9 +2,11 @@ package com.hobbiesservice.service.implementation;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hobbiesservice.domain.Hobby;
 import com.hobbiesservice.domain.Status;
 import com.hobbiesservice.domain.Type;
 import com.hobbiesservice.dto.HobbyRequest;
+import com.hobbiesservice.dto.HobbyResponse;
 import com.hobbiesservice.repository.HobbyRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +66,7 @@ class HobbyServiceImplTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(hobby_request_json))
                 .andExpect(status().isCreated());
-        assertEquals(1, hobbyRepository.findAll().size());
+        assertEquals(2, hobbyRepository.findAll().size());
     }
 
 
@@ -83,12 +85,23 @@ class HobbyServiceImplTest {
     }
 
     @Test
-    void deleteHobby() {
+    void GetHobbyById_WithStatus_200() throws Exception {
+        Hobby hobbyResponse = hobbyRepository.findHobbyByName("Temp");
+        System.out.println("HOBB22" + hobbyResponse);
+        String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/api/v1/hobby/7777")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(hobby_request_json))
+                .andExpect(status().isOk());
+        assertEquals("Temp", hobbyRepository.findHobbyByName("Temp").getName());
     }
 
     @Test
-    void getById() {
+    void deleteHobby() {
     }
+
+
 
     @Test
     void getAllHobbies() {

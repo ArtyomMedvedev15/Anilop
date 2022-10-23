@@ -47,9 +47,9 @@ public class HobbyServiceImpl implements HobbyService {
     }
 
     @Override
-    public Hobby getById(Long idHobby) {
+    public HobbyResponse getById(Long idHobby) {
         log.info("Get hobby by id - {}",idHobby);
-        return hobbyRepository.getById(idHobby);
+        return mapToHobbyResponse(hobbyRepository.getById(idHobby));
     }
 
     @Override
@@ -89,6 +89,7 @@ public class HobbyServiceImpl implements HobbyService {
                 .author_id(hobby.getAuthor_id())
                 .type(hobby.getType())
                 .created(hobby.getCreated())
+                .updated(hobby.getUpdated())
                 .build();
     }
 

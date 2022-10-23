@@ -36,10 +36,6 @@ public class HobbyRestController {
 
     @PostMapping("/update")
     public ResponseEntity<HobbyRequest> updateHobby(@RequestBody HobbyRequest hobbyRequest){
-//        if(hobbyUpdate.getId()==null){
-//            log.info("Id hobby equal null");
-//            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-//        }
         log.info("Update hobby with endpoint");
         hobbyService.updateHobby(hobbyRequest);
 
@@ -47,5 +43,12 @@ public class HobbyRestController {
 
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<HobbyResponse> getHobbyById(@PathVariable("id")Long idHobby){
+        log.info("Get hobby by id with endpoint");
+        HobbyResponse hobbyResponse = hobbyService.getById(idHobby);
+        return ResponseEntity.ok().body(hobbyResponse);
+
+    }
 
 }
