@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create dtos for hobbies and start refactor service">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Fix log in controller and service">
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/test/java/com/hobbiesservice/service/implementation/HobbyServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HobbiesService/src/test/java/configuration/TestContainerConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMainHobbiesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMainHobbiesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="package-info" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -55,6 +54,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
     "last_opened_file_path": "U:/Work/Anilop/AuthorService/src/main/resources",
     "nodejs_package_manager_path": "npm",
@@ -75,6 +76,12 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="U:\Work\Anilop\AuthorService\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.hobbiesservice.service.implementation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="domain" />
@@ -123,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
       <workItem from="1666274235367" duration="6404000" />
-      <workItem from="1666519470279" duration="1002000" />
+      <workItem from="1666519470279" duration="2345000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -209,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666285313515</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fix log in controller and service">
+      <created>1666520758289</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666520758289</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +253,8 @@
     <MESSAGE value="Author service implementation" />
     <MESSAGE value="Author rest endpoint" />
     <MESSAGE value="Create dtos for hobbies and start refactor service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create dtos for hobbies and start refactor service" />
+    <MESSAGE value="Fix log in controller and service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix log in controller and service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
