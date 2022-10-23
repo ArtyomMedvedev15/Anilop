@@ -14,6 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 public class HobbyRequest {
+    private Long id;
     private String name;
     private String describe;
     private Date duration;
