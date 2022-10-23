@@ -21,7 +21,9 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -87,7 +89,6 @@ class HobbyServiceImplTest {
     @Test
     void GetHobbyById_WithStatus_200() throws Exception {
         Hobby hobbyResponse = hobbyRepository.findHobbyByName("Temp");
-        System.out.println("HOBB22" + hobbyResponse);
         String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
         this.mockMvc.perform(MockMvcRequestBuilders
                         .get("/api/v1/hobby/7777")
@@ -108,7 +109,15 @@ class HobbyServiceImplTest {
 
 
     @Test
-    void getAllHobbies() {
+    void GetAllHobbies_WithStatus_200() throws Exception {
+        List<HobbyRequest> hobbyResponse = Arrays.asList(getHobbyRequest());
+         String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/api/v1/hobby/hobbies")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(hobby_request_json))
+                .andExpect(status().isOk());
+        assertEquals(1, hobbyRepository.findAll().size());
     }
 
     @Test

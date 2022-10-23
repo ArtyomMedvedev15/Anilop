@@ -34,7 +34,7 @@ public class HobbyRestController {
         hobbyService.createHobby(hobbyRequest);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<HobbyRequest> updateHobby(@RequestBody HobbyRequest hobbyRequest){
         log.info("Update hobby with endpoint");
         hobbyService.updateHobby(hobbyRequest);
