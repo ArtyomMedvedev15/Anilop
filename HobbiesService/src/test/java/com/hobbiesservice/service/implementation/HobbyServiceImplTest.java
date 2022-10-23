@@ -98,7 +98,11 @@ class HobbyServiceImplTest {
     }
 
     @Test
-    void deleteHobby() {
+    void DeleteHobbyById_WithStatus_204() throws Exception {
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .delete("/api/v1/hobby/delete/7777"))
+                .andExpect(status().isNoContent());
+        assertEquals(0, hobbyRepository.findAll().size());
     }
 
 

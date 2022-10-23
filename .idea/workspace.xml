@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Test for create and update endpoints">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create endpoint and test for get by id">
       <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/test/java/com/hobbiesservice/service/implementation/HobbyServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/test/java/com/hobbiesservice/service/implementation/HobbyServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/test/resources/sql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/test/resources/sql/init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +85,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HobbyServiceImplTest.GetHobbyById_WithStatus_200">
+  <component name="RunManager" selected="JUnit.HobbyServiceImplTest.DeleteHobbyById_WithStatus_204">
     <configuration name="HobbyServiceImplTest.CreateHobby_WithStatus_201" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HobbiesService" />
       <extension name="coverage">
@@ -101,6 +97,22 @@
       <option name="PACKAGE_NAME" value="com.hobbiesservice.service.implementation" />
       <option name="MAIN_CLASS_NAME" value="com.hobbiesservice.service.implementation.HobbyServiceImplTest" />
       <option name="METHOD_NAME" value="CreateHobby_WithStatus_201" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HobbyServiceImplTest.DeleteHobbyById_WithStatus_204" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HobbiesService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hobbiesservice.service.implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hobbiesservice.service.implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.hobbiesservice.service.implementation.HobbyServiceImplTest" />
+      <option name="METHOD_NAME" value="DeleteHobbyById_WithStatus_204" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,19 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppMainAuthorsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="AuthorService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.authorsservice.AppMainAuthorsService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.authorsservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AppMainHobbiesService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="HobbiesService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hobbiesservice.AppMainHobbiesService" />
@@ -166,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HobbyServiceImplTest.GetHobbyById_WithStatus_200" />
+        <item itemvalue="JUnit.HobbyServiceImplTest.DeleteHobbyById_WithStatus_204" />
         <item itemvalue="Spring Boot.AppMainHobbiesService" />
+        <item itemvalue="JUnit.HobbyServiceImplTest.GetHobbyById_WithStatus_200" />
         <item itemvalue="JUnit.HobbyServiceImplTest.UpdateHobby_WithStatus_200" />
         <item itemvalue="JUnit.HobbyServiceImplTest.CreateHobby_WithStatus_201" />
-        <item itemvalue="Spring Boot.AppMainAuthorsService" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +183,7 @@
       <updated>1663612562151</updated>
       <workItem from="1666274235367" duration="6404000" />
       <workItem from="1666519470279" duration="4138000" />
-      <workItem from="1666537780802" duration="3266000" />
+      <workItem from="1666537780802" duration="3771000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -291,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666540059750</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Create endpoint and test for get by id">
+      <created>1666541259760</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666541259760</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +330,8 @@
     <MESSAGE value="Fix log in controller and service" />
     <MESSAGE value="Test container configuration" />
     <MESSAGE value="Test for create and update endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test for create and update endpoints" />
+    <MESSAGE value="Create endpoint and test for get by id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create endpoint and test for get by id" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

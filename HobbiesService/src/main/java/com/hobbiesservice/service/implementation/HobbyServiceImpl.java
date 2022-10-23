@@ -41,9 +41,10 @@ public class HobbyServiceImpl implements HobbyService {
     }
 
     @Override
-    public void deleteHobby(Hobby hobbyDelete) {
+    public void deleteHobby(HobbyResponse hobbyDelete) {
+        Hobby hobbyDeleted = hobbyRepository.getById(hobbyDelete.getId());
         log.info("Delete hobby - {}",hobbyDelete);
-        hobbyRepository.delete(hobbyDelete);
+        hobbyRepository.delete(hobbyDeleted);
     }
 
     @Override

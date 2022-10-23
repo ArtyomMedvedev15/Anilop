@@ -51,4 +51,12 @@ public class HobbyRestController {
 
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<HobbyResponse>deleteHobbyById(@PathVariable("id")Long idHobby){
+        HobbyResponse hobbyDelete = hobbyService.getById(idHobby);
+        log.info("Delete hobby with id - {}",idHobby);
+        hobbyService.deleteHobby(hobbyDelete);
+        return ResponseEntity.noContent().build();
+    }
+
 }

@@ -10,7 +10,7 @@ import java.util.List;
 public interface HobbyService {
     Hobby createHobby(HobbyRequest hobbyCreate);
     Hobby updateHobby(HobbyRequest hobbyUpdate);
-    void deleteHobby(Hobby hobbyDelete);
+    void deleteHobby(HobbyResponse hobbyDelete);
     HobbyResponse getById(Long idHobby);
     List<HobbyResponse>getAllHobbies();
     List<Hobby>findByName(String name);
