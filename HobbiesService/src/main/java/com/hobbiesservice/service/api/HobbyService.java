@@ -13,7 +13,7 @@ public interface HobbyService {
     void deleteHobby(HobbyResponse hobbyDelete);
     HobbyResponse getById(Long idHobby);
     List<HobbyResponse>getAllHobbies();
-    List<Hobby>findByName(String name);
+    List<HobbyResponse>findByName(String name);
     List<Hobby>findByType(Type type);
     List<Hobby>findByAuthor(Long idAuthor);
 

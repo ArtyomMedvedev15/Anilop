@@ -83,19 +83,19 @@ class HobbyServiceImplTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(hobby_request_json))
                 .andExpect(status().isOk());
-        assertEquals("Updated name", hobbyRepository.findHobbyByName("Updated name").getName());
+        assertEquals("Updated name", hobbyRepository.findHobbyByName("Updated name").get(0).getName());
     }
 
     @Test
     void GetHobbyById_WithStatus_200() throws Exception {
-        Hobby hobbyResponse = hobbyRepository.findHobbyByName("Temp");
+        Hobby hobbyResponse = hobbyRepository.findHobbyByName("Temp").get(0);
         String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
         this.mockMvc.perform(MockMvcRequestBuilders
                         .get("/api/v1/hobby/7777")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(hobby_request_json))
                 .andExpect(status().isOk());
-        assertEquals("Temp", hobbyRepository.findHobbyByName("Temp").getName());
+        assertEquals("Temp", hobbyRepository.findHobbyByName("Temp").get(0).getName());
     }
 
     @Test
@@ -111,7 +111,7 @@ class HobbyServiceImplTest {
     @Test
     void GetAllHobbies_WithStatus_200() throws Exception {
         List<HobbyRequest> hobbyResponse = Arrays.asList(getHobbyRequest());
-         String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
+        String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
         this.mockMvc.perform(MockMvcRequestBuilders
                         .get("/api/v1/hobby/hobbies")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -121,7 +121,15 @@ class HobbyServiceImplTest {
     }
 
     @Test
-    void findByName() {
+    void FindHobbiesByName_WithStatus_200() throws Exception {
+        List<Hobby> hobbyResponse = hobbyRepository.findHobbyByName("Temp");
+        String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/api/v1/hobby/findbyname/Temp")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(hobby_request_json))
+                .andExpect(status().isOk());
+        assertEquals(1, hobbyRepository.findHobbyByName("Temp").size());
     }
 
     @Test

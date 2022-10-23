@@ -6,7 +6,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface HobbyRepository extends JpaRepository<Hobby,Long> {
-        Hobby findHobbyByName(String name);
+        @Query(value = "SELECT h FROM Hobby h WHERE h.name LIKE CONCAT('%',:name,'%')")
+        List<Hobby> findHobbyByName(@Param("name")String name);
 }

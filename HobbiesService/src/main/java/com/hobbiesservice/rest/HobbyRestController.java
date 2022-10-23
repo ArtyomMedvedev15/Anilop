@@ -59,4 +59,12 @@ public class HobbyRestController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/findbyname/{name}")
+    public ResponseEntity<List<HobbyResponse>>findHobbyByName(@PathVariable("name")String name){
+        log.info("Find hobby by name {}",name);
+        return ResponseEntity.ok().body(hobbyService.findByName(name));
+    }
+
+
+
 }
