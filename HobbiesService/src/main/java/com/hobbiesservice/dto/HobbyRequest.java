@@ -21,4 +21,6 @@ public class HobbyRequest {
     private Type type;
     private Long author_id;
     private Integer rating;
+    private Date created;
+
 }

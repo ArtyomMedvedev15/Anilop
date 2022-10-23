@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Author rest endpoint">
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create dtos for hobbies and start refactor service">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMainHobbiesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMainHobbiesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/dto/HobbyResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/rest/HobbyRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/api/HobbyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/service/implementation/HobbyServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,10 +57,11 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
     "last_opened_file_path": "U:/Work/Anilop/AuthorService/src/main/resources",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "db5d9912c3b193573ac1aa00aa725408"
+    "spring.configuration.checksum": "35f2ef12df5ddf856821d69c30dd0a4b"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -78,7 +80,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainAuthorsService">
+  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
     <configuration name="AppMainAuthorsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="AuthorService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.authorsservice.AppMainAuthorsService" />
@@ -107,8 +109,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AppMainAuthorsService" />
         <item itemvalue="Spring Boot.AppMainHobbiesService" />
+        <item itemvalue="Spring Boot.AppMainAuthorsService" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +122,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1666274235367" duration="5315000" />
+      <workItem from="1666274235367" duration="6404000" />
+      <workItem from="1666519470279" duration="1002000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -199,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666276949821</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Create dtos for hobbies and start refactor service">
+      <created>1666285313515</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666285313515</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +238,8 @@
     <MESSAGE value="Author service api create" />
     <MESSAGE value="Author service implementation" />
     <MESSAGE value="Author rest endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Author rest endpoint" />
+    <MESSAGE value="Create dtos for hobbies and start refactor service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create dtos for hobbies and start refactor service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

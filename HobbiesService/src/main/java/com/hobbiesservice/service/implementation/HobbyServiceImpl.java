@@ -31,7 +31,7 @@ public class HobbyServiceImpl implements HobbyService {
                 .rating(hobbyRequest.getRating())
                 .build();
 
-        log.info("Create hobby - {}",hobby.getId());
+        log.info("Create hobby - {}",hobby.getName());
         return hobbyRepository.save(hobby);
     }
 
@@ -71,6 +71,7 @@ public class HobbyServiceImpl implements HobbyService {
                 .logoPath(hobby.getLogoPath())
                 .author_id(hobby.getAuthor_id())
                 .type(hobby.getType())
+                .created(hobby.getCreated())
                 .build();
     }
 

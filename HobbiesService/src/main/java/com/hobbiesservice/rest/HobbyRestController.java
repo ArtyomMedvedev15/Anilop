@@ -30,6 +30,7 @@ public class HobbyRestController {
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void createHobby(@RequestBody HobbyRequest hobbyRequest){
+        log.info("Create hobby with endpoint");
         hobbyService.createHobby(hobbyRequest);
     }
 
