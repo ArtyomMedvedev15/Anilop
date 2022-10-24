@@ -14,4 +14,7 @@ public interface HobbyRepository extends JpaRepository<Hobby,Long> {
         @Query(value = "SELECT h FROM Hobby h WHERE h.name LIKE CONCAT('%',:name,'%')")
         List<Hobby> findHobbyByName(@Param("name")String name);
         List<Hobby>findByType(Type type);
+
+        @Query("SELECT h FROM Hobby h WHERE h.author_id = :author_id")
+        List<Hobby>findByAuthorId(@Param("author_id") Long author_id);
 }

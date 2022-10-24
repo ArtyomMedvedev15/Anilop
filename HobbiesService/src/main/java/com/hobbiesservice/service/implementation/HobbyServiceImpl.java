@@ -74,9 +74,9 @@ public class HobbyServiceImpl implements HobbyService {
     }
 
     @Override
-    public List<Hobby> findByAuthor(Long idAuthor) {
+    public List<HobbyResponse> findByAuthor(Long idAuthor) {
         log.info("Find all hobby with author id - {}",idAuthor);
-        return hobbyRepository.findAll().stream().filter(o1->o1.getAuthor_id().equals(idAuthor)).toList();
+        return hobbyRepository.findByAuthorId(idAuthor).stream().map(this::mapToHobbyResponse).toList();
     }
     private HobbyResponse mapToHobbyResponse(Hobby hobby) {
         return HobbyResponse.builder()

@@ -72,6 +72,12 @@ public class HobbyRestController {
         return ResponseEntity.ok().body(hobbyService.findByType(Type.valueOf(type)));
     }
 
+    @GetMapping("/findbyauthorid/{id}")
+    public ResponseEntity<List<HobbyResponse>>findHobbyByAuthorId(@PathVariable("id")Long idAuthor){
+        log.info("Find hobby by author id {}",idAuthor);
+        return ResponseEntity.ok().body(hobbyService.findByAuthor(idAuthor));
+    }
+
 
 
 }

@@ -145,7 +145,15 @@ class HobbyServiceImplTest {
     }
 
     @Test
-    void findByAuthor() {
+    void FindHobbiesByAuthorId_WithStatus_200() throws Exception {
+        List<Hobby> hobbyResponse = hobbyRepository.findByAuthorId(1L);
+        String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/api/v1/hobby/findbyauthorid/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(hobby_request_json))
+                .andExpect(status().isOk());
+        assertEquals(1, hobbyRepository.findByAuthorId(1L).size());
     }
 
     private HobbyRequest getHobbyRequest() {
