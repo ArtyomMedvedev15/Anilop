@@ -68,9 +68,9 @@ public class HobbyServiceImpl implements HobbyService {
     }
 
     @Override
-    public List<Hobby> findByType(Type type) {
+    public List<HobbyResponse> findByType(Type type) {
         log.info("Find all hobby with type - {}", type);
-        return hobbyRepository.findAll().stream().filter(o1->o1.getType().equals(type)).toList();
+        return hobbyRepository.findByType(type).stream().map(this::mapToHobbyResponse).toList();
     }
 
     @Override

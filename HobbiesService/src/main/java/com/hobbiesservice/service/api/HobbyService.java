@@ -14,7 +14,7 @@ public interface HobbyService {
     HobbyResponse getById(Long idHobby);
     List<HobbyResponse>getAllHobbies();
     List<HobbyResponse>findByName(String name);
-    List<Hobby>findByType(Type type);
+    List<HobbyResponse>findByType(Type type);
     List<Hobby>findByAuthor(Long idAuthor);
 
 

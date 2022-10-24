@@ -1,6 +1,7 @@
 package com.hobbiesservice.rest;
 
 import com.hobbiesservice.domain.Hobby;
+import com.hobbiesservice.domain.Type;
 import com.hobbiesservice.dto.HobbyRequest;
 import com.hobbiesservice.dto.HobbyResponse;
 import com.hobbiesservice.service.api.HobbyService;
@@ -63,6 +64,12 @@ public class HobbyRestController {
     public ResponseEntity<List<HobbyResponse>>findHobbyByName(@PathVariable("name")String name){
         log.info("Find hobby by name {}",name);
         return ResponseEntity.ok().body(hobbyService.findByName(name));
+    }
+
+    @GetMapping("/findbytype/{type}")
+    public ResponseEntity<List<HobbyResponse>>findHobbyByType(@PathVariable("type")String type){
+        log.info("Find hobby by type {}", type);
+        return ResponseEntity.ok().body(hobbyService.findByType(Type.valueOf(type)));
     }
 
 

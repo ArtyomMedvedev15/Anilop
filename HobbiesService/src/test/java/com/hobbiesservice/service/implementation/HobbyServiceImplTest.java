@@ -133,7 +133,15 @@ class HobbyServiceImplTest {
     }
 
     @Test
-    void findByType() {
+    void FindHobbiesByType_WithStatus_200() throws Exception {
+        List<Hobby> hobbyResponse = hobbyRepository.findByType(Type.SPORT);
+        String hobby_request_json = objectMapper.writeValueAsString(hobbyResponse);
+        this.mockMvc.perform(MockMvcRequestBuilders
+                        .get("/api/v1/hobby/findbytype/SPORT")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(hobby_request_json))
+                .andExpect(status().isOk());
+        assertEquals(1, hobbyRepository.findByType(Type.SPORT).size());
     }
 
     @Test
