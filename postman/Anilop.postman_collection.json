@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "88ae2e61-e7ed-4979-82c8-21b315f6f2a3",
+		"name": "Anilop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10958180"
+	},
+	"item": [
+		{
+			"name": "Hobby service",
+			"item": [
+				{
+					"name": "Get all hobbies",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create hobby",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test hobby1\",\r\n    \"describe\":\"Describe test\",\r\n    \"duration\":\"2022-10-23\",\r\n    \"logoPath\":\"Test logo\",\r\n    \"type\":\"SPORT\",\r\n    \"author_id\":1,\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update hobby",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":6,\r\n    \"name\":\"Test updated 123\",\r\n    \"describe\":\"Describe test 13\",\r\n    \"duration\":\"2022-10-23\",\r\n    \"logoPath\":\"Test logo\",\r\n    \"type\":\"SPORT\",\r\n    \"author_id\":1,\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get hobby by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete hobby by id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find hobbies by name",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Find hobbies by type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/findbytype/SPORT",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"findbytype",
+								"SPORT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find hobbies by author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/findbyauthorid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"findbyauthorid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
