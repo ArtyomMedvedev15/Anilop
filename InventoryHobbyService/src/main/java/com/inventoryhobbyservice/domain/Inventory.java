@@ -35,6 +35,6 @@ public class Inventory {
     private Status status;
 
     @OneToMany
-    private List<InvenoryInfo> hobbylist = new ArrayList<>();
+    private List<InventoryInfo> hobbylist = new ArrayList<>();
 
 }

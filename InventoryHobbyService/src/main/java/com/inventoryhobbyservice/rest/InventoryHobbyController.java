@@ -1,5 +1,7 @@
 package com.inventoryhobbyservice.rest;
 
+import com.inventoryhobbyservice.domain.InventoryInfo;
+import com.inventoryhobbyservice.dto.InventoryInfoRequest;
 import com.inventoryhobbyservice.service.InventoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +16,19 @@ public class InventoryHobbyController {
 
     @GetMapping("/verify/{sku_code}")
     public ResponseEntity<Boolean> IsInStock(@PathVariable("sku_code")String skuCode){
-        return ResponseEntity.ok().body(inventoryService.IsInStock(skuCode));
+        return ResponseEntity.ok().body(true);
+    }
+
+    @GetMapping("/addtoinventory/{idinventory}")
+    public ResponseEntity<InventoryInfo>addHobbyToInventory(@PathVariable("idinventory")Long idinventory,
+                                                            @RequestBody InventoryInfoRequest inventoryInfoRequest){
+        InventoryInfo inventoryInfoFromDto = InventoryInfo.builder()
+                .userInventoryId(inventoryInfoRequest.getUserInventoryId())
+                .hobbyInventoryId(inventoryInfoRequest.getHobbyInventoryId())
+                .build();
+        InventoryInfo inventoryInfoResponse = inventoryService.addHobbyToInventory(inventoryInfoFromDto,idinventory);
+
+        return ResponseEntity.ok().body(inventoryInfoResponse);
     }
 
 }
