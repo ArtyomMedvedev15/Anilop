@@ -1,12 +1,9 @@
 package com.hobbiesservice.service.implementation;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hobbiesservice.domain.Hobby;
-import com.hobbiesservice.domain.Status;
 import com.hobbiesservice.domain.Type;
 import com.hobbiesservice.dto.HobbyRequest;
-import com.hobbiesservice.dto.HobbyResponse;
 import com.hobbiesservice.repository.HobbyRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @Testcontainers
 @AutoConfigureMockMvc
-class HobbyServiceImplTest {
+class HobbyServiceIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -79,7 +76,7 @@ class HobbyServiceImplTest {
         hobbyRequestTest.setName("Updated name");
         String hobby_request_json = objectMapper.writeValueAsString(hobbyRequestTest);
         this.mockMvc.perform(MockMvcRequestBuilders
-                        .post("/api/v1/hobby/update")
+                        .put("/api/v1/hobby/update")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(hobby_request_json))
                 .andExpect(status().isOk());
@@ -103,7 +100,7 @@ class HobbyServiceImplTest {
         this.mockMvc.perform(MockMvcRequestBuilders
                         .delete("/api/v1/hobby/delete/7777"))
                 .andExpect(status().isNoContent());
-        assertEquals(0, hobbyRepository.findAll().size());
+        assertEquals(1, hobbyRepository.findAll().size());
     }
 
 
@@ -117,7 +114,7 @@ class HobbyServiceImplTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(hobby_request_json))
                 .andExpect(status().isOk());
-        assertEquals(1, hobbyRepository.findAll().size());
+        assertEquals(2, hobbyRepository.findAll().size());
     }
 
     @Test
@@ -129,7 +126,7 @@ class HobbyServiceImplTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(hobby_request_json))
                 .andExpect(status().isOk());
-        assertEquals(1, hobbyRepository.findHobbyByName("Temp").size());
+        assertEquals(2, hobbyRepository.findHobbyByName("Temp").size());
     }
 
     @Test
@@ -153,7 +150,7 @@ class HobbyServiceImplTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(hobby_request_json))
                 .andExpect(status().isOk());
-        assertEquals(1, hobbyRepository.findByAuthorId(1L).size());
+        assertEquals(2, hobbyRepository.findByAuthorId(1L).size());
     }
 
     private HobbyRequest getHobbyRequest() {
