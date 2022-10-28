@@ -2,10 +2,13 @@ package com.inventoryhobbyservice.rest;
 
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.InventoryInfoRequest;
+import com.inventoryhobbyservice.dto.InventoryInfoResponse;
 import com.inventoryhobbyservice.service.InventoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/inventory")
@@ -29,6 +32,11 @@ public class InventoryHobbyController {
         InventoryInfo inventoryInfoResponse = inventoryService.addHobbyToInventory(inventoryInfoFromDto,idinventory);
 
         return ResponseEntity.ok().body(inventoryInfoResponse);
+    }
+
+    @GetMapping("/{userid}")
+    public ResponseEntity<List<InventoryInfoResponse>>findAllInventoryInfoByUserId(@PathVariable("userid")Long userId){
+        return ResponseEntity.ok().body(inventoryService.findAllInventoryByUserInventoryId(userId));
     }
 
 }
