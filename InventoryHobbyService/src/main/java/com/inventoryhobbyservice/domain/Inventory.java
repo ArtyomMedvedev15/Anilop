@@ -1,4 +1,4 @@
-package domain;
+package com.inventoryhobbyservice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
