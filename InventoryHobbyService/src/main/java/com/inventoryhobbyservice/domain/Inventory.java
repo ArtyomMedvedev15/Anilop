@@ -8,7 +8,9 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -32,5 +34,7 @@ public class Inventory {
     @Column(name = "status")
     private Status status;
 
-    private String skuCode;
+    @OneToMany
+    private List<InvenoryInfo> hobbylist = new ArrayList<>();
+
 }

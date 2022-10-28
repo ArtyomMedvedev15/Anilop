@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Postman collection">
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/AppMainInventoyHobbyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create repository">
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/InvenoryInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/test/java/com/hobbiesservice/service/implementation/HobbyServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/test/java/com/hobbiesservice/service/implementation/HobbyServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/test/resources/sql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/test/resources/sql/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +24,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="package-info" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -89,10 +89,11 @@
       <recent name="com.hobbiesservice.service.implementation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.inventoryhobbyservice.domain" />
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HobbyServiceIntegrationTest">
+  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
     <configuration name="HobbyServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HobbiesService" />
       <extension name="coverage">
@@ -205,7 +206,7 @@
       <workItem from="1666519470279" duration="4138000" />
       <workItem from="1666537780802" duration="5702000" />
       <workItem from="1666634275811" duration="3548000" />
-      <workItem from="1666967027632" duration="2979000" />
+      <workItem from="1666967027632" duration="6265000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -361,7 +362,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666637454207</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Create inventory hobby service and domain">
+      <created>1666971401113</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666971401113</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Create repository">
+      <created>1666971468523</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1666971468523</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +416,9 @@
     <MESSAGE value="Create find by type endpoint and test" />
     <MESSAGE value="Create find by author id endpoint and test" />
     <MESSAGE value="Postman collection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Postman collection" />
+    <MESSAGE value="Create inventory hobby service and domain" />
+    <MESSAGE value="Create repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create repository" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
