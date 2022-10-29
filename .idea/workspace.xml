@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Add hobby to inventory user">
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryInfoResponse.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Find all hobby by user id">
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryInfoDeleteRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/InventoryInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/InventoryInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "35f2ef12df5ddf856821d69c30dd0a4b"
+    "spring.configuration.checksum": "2715d3f4f5658d3995cfa534159eafa0"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -202,7 +206,8 @@
       <workItem from="1666519470279" duration="4138000" />
       <workItem from="1666537780802" duration="5702000" />
       <workItem from="1666634275811" duration="3548000" />
-      <workItem from="1666967027632" duration="9071000" />
+      <workItem from="1666967027632" duration="12880000" />
+      <workItem from="1667069905352" duration="2851000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -386,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666976531659</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Find all hobby by user id">
+      <created>1666977449521</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1666977449521</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Base entity created" />
     <MESSAGE value="Hobby repository created" />
     <MESSAGE value="Hobby service api" />
     <MESSAGE value="Hobby service implementation" />
@@ -429,7 +440,8 @@
     <MESSAGE value="Create repository" />
     <MESSAGE value="Modify domains structure" />
     <MESSAGE value="Add hobby to inventory user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add hobby to inventory user" />
+    <MESSAGE value="Find all hobby by user id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find all hobby by user id" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

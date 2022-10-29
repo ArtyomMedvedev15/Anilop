@@ -4,8 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.UUID;
 
 
@@ -22,8 +24,11 @@ public class InventoryInfo {
 
     private UUID serial_id;
 
-    private Long userInventoryId;
+    private Long user_inventory_id;
 
-    private Long hobbyInventoryId;
+    private Long hobby_id;
 
+    @CreatedDate
+    @Column(name = "created")
+    private Date created;
 }

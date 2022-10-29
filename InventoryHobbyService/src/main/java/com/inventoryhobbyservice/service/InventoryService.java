@@ -9,7 +9,7 @@ import java.util.UUID;
 public interface InventoryService {
 
     InventoryInfo addHobbyToInventory(InventoryInfo addInventoryHobby,Long idInventory);
-    InventoryInfo deleteInventory(UUID serial_id, Long userInventoryId);
+    Boolean deleteInventory(UUID serial_id, Long userInventoryId);
     List<InventoryInfoResponse>findAllInventoryByUserInventoryId(Long userInventoryId);
 
 

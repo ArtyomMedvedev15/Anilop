@@ -2,7 +2,24 @@ package com.inventoryhobbyservice.repository;
 
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
-public interface InventoryInfoRepository extends JpaRepository<InventoryInfo,Long> {
-    InventoryInfo findByUserInventoryIdAndHobbyInventoryId(Long userInventoryId,Long hobbyInventoryId);
+import java.util.List;
+import java.util.UUID;
+
+public interface InventoryInfoRepository extends JpaRepository<InventoryInfo, Long> {
+    @Query("select ih from InventoryInfo ih where ih.user_inventory_id=:user_inventory_id and ih.serial_id=:serial_id")
+    InventoryInfo findByUserIdAndSerialId(@Param("serial_id") UUID serial_id, @Param("user_inventory_id") Long user_inventory_id);
+
+    @Query("select ih from InventoryInfo ih where ih.serial_id=:serial_id")
+    InventoryInfo findBySerialId(@Param("serial_id") UUID serial_id);
+
+    @Query("select ih from InventoryInfo ih where ih.user_inventory_id=:user_inventory_id")
+    List<InventoryInfo>findByUserInventoryId(@Param("user_inventory_id") Long user_inventory_id);
+    @Modifying
+    @Query("delete from InventoryInfo where serial_id=:serial_id")
+    void deleteBySerialId(@Param("serial_id") UUID serial_id);
+
 }

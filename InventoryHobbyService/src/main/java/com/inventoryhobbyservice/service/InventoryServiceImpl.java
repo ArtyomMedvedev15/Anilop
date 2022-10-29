@@ -26,11 +26,11 @@ public class InventoryServiceImpl implements InventoryService{
 
     @Override
     public InventoryInfo addHobbyToInventory(InventoryInfo addInventoryHobby,Long idInventory) {
-        InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserInventoryIdAndHobbyInventoryId(addInventoryHobby.getUserInventoryId(),addInventoryHobby.getHobbyInventoryId());
+        InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndSerialId(addInventoryHobby.getSerial_id(),
+                addInventoryHobby.getUser_inventory_id());
         if(inventoryInfoCheck==null){
             addInventoryHobby.setSerial_id(UUID.randomUUID());
             inventoryInfoRepository.save(addInventoryHobby);
-            inventoryRepository.getById(idInventory).getHobbylist().add(addInventoryHobby);
             log.info("Add hobby to inventory user {}",addInventoryHobby);
             return addInventoryHobby;
         }else {
@@ -40,15 +40,23 @@ public class InventoryServiceImpl implements InventoryService{
     }
 
     @Override
-    public InventoryInfo deleteInventory(UUID serial_id, Long userInventoryId) {
-        return null;
+    public Boolean deleteInventory(UUID serial_id, Long userInventoryId) {
+        Optional<Inventory> inventoryCheck = Optional.of(inventoryRepository.getById(userInventoryId));
+        if(inventoryCheck.isPresent()) {
+            inventoryInfoRepository.deleteBySerialId(serial_id);
+            log.info("Hobby with serial id {} was deleted",serial_id);
+            return true;
+        }else {
+            log.info("Inventory with id {} doesn't exists",userInventoryId);
+            return false;
+        }
     }
 
     @Override
     public List<InventoryInfoResponse> findAllInventoryByUserInventoryId(Long userInventoryId) {
         Optional<Inventory> inventoryCheck = Optional.of(inventoryRepository.getById(userInventoryId));
         if(inventoryCheck.isPresent()) {
-            List<InventoryInfo> inventoryInfoList = inventoryRepository.getById(userInventoryId).getHobbylist();
+            List<InventoryInfo> inventoryInfoList = inventoryInfoRepository.findByUserInventoryId(userInventoryId);
             log.info("Find all hobby in inventory for user with id {}",userInventoryId);
             return inventoryInfoList.stream().map(this::getInventoryInfoToDto).toList();
         }else{
@@ -60,8 +68,8 @@ public class InventoryServiceImpl implements InventoryService{
     private InventoryInfoResponse getInventoryInfoToDto(InventoryInfo info){
         return InventoryInfoResponse.builder()
                 .id(info.getId())
-                .userInventoryId(info.getUserInventoryId())
-                .hobbyInventoryId(info.getHobbyInventoryId())
+                .userInventoryId(info.getUser_inventory_id())
+                .hobbyInventoryId(info.getHobby_id())
                 .serial_id(info.getSerial_id())
                 .build();
     }

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -34,7 +35,5 @@ public class Inventory {
     @Column(name = "status")
     private Status status;
 
-    @OneToMany
-    private List<InventoryInfo> hobbylist = new ArrayList<>();
 
 }
