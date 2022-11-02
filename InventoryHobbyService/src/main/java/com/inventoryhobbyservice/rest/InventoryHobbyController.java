@@ -22,8 +22,14 @@ public class InventoryHobbyController {
 
     @PostMapping("/create")
     public ResponseEntity<InventoryResponse>createUserInventory(@RequestBody InventoryRequest inventoryRequest){
-        InventoryResponse inventoryResponse = InventoryService.createUserInventory(inventoryRequest);
-        return ResponseEntity.ok().body();
+        InventoryResponse inventoryResponse = inventoryService.createUserInventory(inventoryRequest);
+        if(inventoryResponse!=null) {
+            log.info("Create inventory for user with id {} with endpoint",inventoryRequest.getUserId());
+            return ResponseEntity.ok().body(inventoryResponse);
+        }else{
+            log.error("Invetory for user with id {} already created",inventoryRequest.getUserId());
+            return ResponseEntity.badRequest().body(null);
+        }
     }
 
 
