@@ -23,7 +23,9 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Date addedDate;
+    private Long userId;
+
+    private Date addedHobbyDate;
 
     @CreatedDate
     @Column(name = "created")

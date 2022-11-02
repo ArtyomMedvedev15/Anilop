@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Refactor inventory controller">
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/test/java/com/inventoryhobbyservice/service/InventoryServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/test/resources/sql/init.sql" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Dto for inventory create endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
         <option value="Enum" />
         <option value="package-info" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -208,7 +209,7 @@
       <workItem from="1666967027632" duration="12880000" />
       <workItem from="1667069905352" duration="2998000" />
       <workItem from="1667236808108" duration="3597000" />
-      <workItem from="1667398343453" duration="596000" />
+      <workItem from="1667398343453" duration="1576000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -413,7 +414,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667237635280</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Refactor repository">
+      <created>1667399033855</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667399033855</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Dto for inventory create endpoint">
+      <created>1667399322258</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1667399322258</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,8 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hobby service implementation" />
-    <MESSAGE value="Hobby rest api and application properties" />
     <MESSAGE value="Create domain in author service" />
     <MESSAGE value="Author repository create" />
     <MESSAGE value="Author service api create" />
@@ -456,7 +469,9 @@
     <MESSAGE value="Find all hobby by user id" />
     <MESSAGE value="Delete hobby from inventory user and refactor domains" />
     <MESSAGE value="Refactor inventory controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor inventory controller" />
+    <MESSAGE value="Refactor repository" />
+    <MESSAGE value="Dto for inventory create endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dto for inventory create endpoint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

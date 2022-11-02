@@ -1,9 +1,8 @@
 package com.inventoryhobbyservice.rest;
 
 import com.inventoryhobbyservice.domain.InventoryInfo;
-import com.inventoryhobbyservice.dto.InventoryInfoDeleteRequest;
-import com.inventoryhobbyservice.dto.InventoryInfoRequest;
-import com.inventoryhobbyservice.dto.InventoryInfoResponse;
+import com.inventoryhobbyservice.dto.*;
+import com.inventoryhobbyservice.repository.InventoryRepository;
 import com.inventoryhobbyservice.service.api.InventoryService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +21,10 @@ public class InventoryHobbyController {
     private InventoryService inventoryService;
 
     @PostMapping("/create")
-    public ResponseEntity<InventoryResponse>
+    public ResponseEntity<InventoryResponse>createUserInventory(@RequestBody InventoryRequest inventoryRequest){
+        InventoryResponse inventoryResponse = InventoryService.createUserInventory(inventoryRequest);
+        return ResponseEntity.ok().body();
+    }
 
 
     @GetMapping("/addtoinventory/{idinventory}/{idhobby}")

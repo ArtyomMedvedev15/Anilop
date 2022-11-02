@@ -3,6 +3,8 @@ package com.inventoryhobbyservice.service.impl;
 import com.inventoryhobbyservice.domain.Inventory;
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.InventoryInfoResponse;
+import com.inventoryhobbyservice.dto.InventoryRequest;
+import com.inventoryhobbyservice.dto.InventoryResponse;
 import com.inventoryhobbyservice.repository.InventoryInfoRepository;
 import com.inventoryhobbyservice.repository.InventoryRepository;
 import com.inventoryhobbyservice.service.api.InventoryService;
@@ -66,6 +68,21 @@ public class InventoryServiceImpl implements InventoryService {
         }
     }
 
+    @Override
+    public InventoryResponse createUserInventory(InventoryRequest inventoryRequest) {
+        Optional<Inventory> inventoryIsExists = Optional.of(inventoryRepository.findByUserId(inventoryRequest.getUserId()));
+        if(inventoryIsExists.isPresent()){
+            Inventory inventoryDomain = Inventory.builder()
+                    .userId(inventoryRequest.getUserId())
+                    .build();
+            log.info("Create inventory for user with id {}",inventoryRequest.getUserId());
+            return getInventoryToDto(inventoryRepository.save(inventoryDomain));
+        }else {
+            log.error("Inventory for user with id {} already created",inventoryRequest.getUserId());
+            return null;
+        }
+    }
+
     private InventoryInfoResponse getInventoryInfoToDto(InventoryInfo info){
         return InventoryInfoResponse.builder()
                 .id(info.getId())
@@ -74,4 +91,14 @@ public class InventoryServiceImpl implements InventoryService {
                 .serial_id(info.getSerial_id())
                 .build();
     }
+
+    private InventoryResponse getInventoryToDto(Inventory inventory){
+        return InventoryResponse.builder()
+                .id(inventory.getId())
+                .userId(inventory.getUserId())
+                .created(inventory.getCreated())
+                .build();
+    }
+
+
 }
