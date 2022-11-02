@@ -21,6 +21,8 @@ public class InventoryHobbyController {
 
     private InventoryService inventoryService;
 
+    @PostMapping("/create")
+    public ResponseEntity<InventoryResponse>
 
 
     @GetMapping("/addtoinventory/{idinventory}/{idhobby}")

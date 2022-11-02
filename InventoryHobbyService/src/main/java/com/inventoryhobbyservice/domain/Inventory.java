@@ -23,6 +23,8 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Date addedDate;
+
     @CreatedDate
     @Column(name = "created")
     private Date created;
