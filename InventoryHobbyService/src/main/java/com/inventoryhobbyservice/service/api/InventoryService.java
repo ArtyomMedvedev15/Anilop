@@ -1,4 +1,4 @@
-package com.inventoryhobbyservice.service;
+package com.inventoryhobbyservice.service.api;
 
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.InventoryInfoResponse;

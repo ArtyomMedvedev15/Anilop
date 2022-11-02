@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.UUID;
 
 public interface InventoryInfoRepository extends JpaRepository<InventoryInfo, Long> {
-    @Query("select ih from InventoryInfo ih where ih.user_inventory_id=:user_inventory_id and ih.serial_id=:serial_id")
-    InventoryInfo findByUserIdAndSerialId(@Param("serial_id") UUID serial_id, @Param("user_inventory_id") Long user_inventory_id);
+    @Query("select ih from InventoryInfo ih where ih.user_inventory_id=:user_inventory_id and ih.hobby_id=:hobby_id")
+    InventoryInfo findByUserIdAndSerialId(@Param("hobby_id") Long hobby_id, @Param("user_inventory_id") Long user_inventory_id);
 
     @Query("select ih from InventoryInfo ih where ih.serial_id=:serial_id")
     InventoryInfo findBySerialId(@Param("serial_id") UUID serial_id);

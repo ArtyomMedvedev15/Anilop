@@ -4,7 +4,7 @@ import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.InventoryInfoDeleteRequest;
 import com.inventoryhobbyservice.dto.InventoryInfoRequest;
 import com.inventoryhobbyservice.dto.InventoryInfoResponse;
-import com.inventoryhobbyservice.service.InventoryService;
+import com.inventoryhobbyservice.service.api.InventoryService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -21,12 +21,14 @@ public class InventoryHobbyController {
 
     private InventoryService inventoryService;
 
-    @GetMapping("/addtoinventory/{idinventory}")
+
+
+    @GetMapping("/addtoinventory/{idinventory}/{idhobby}")
     public ResponseEntity<InventoryInfo>addHobbyToInventory(@PathVariable("idinventory")Long idinventory,
-                                                            @RequestBody InventoryInfoRequest inventoryInfoRequest){
+                                                            @PathVariable("idhobby")Long idhobby){
         InventoryInfo inventoryInfoFromDto = InventoryInfo.builder()
-                .user_inventory_id(inventoryInfoRequest.getUserInventoryId())
-                .hobby_id(inventoryInfoRequest.getHobbyInventoryId())
+                .user_inventory_id(idinventory)
+                .hobby_id(idhobby)
                 .build();
         InventoryInfo inventoryInfoResponse = inventoryService.addHobbyToInventory(inventoryInfoFromDto,idinventory);
 

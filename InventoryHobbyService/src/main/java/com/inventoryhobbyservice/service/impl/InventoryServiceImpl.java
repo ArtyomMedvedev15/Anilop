@@ -1,10 +1,11 @@
-package com.inventoryhobbyservice.service;
+package com.inventoryhobbyservice.service.impl;
 
 import com.inventoryhobbyservice.domain.Inventory;
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.InventoryInfoResponse;
 import com.inventoryhobbyservice.repository.InventoryInfoRepository;
 import com.inventoryhobbyservice.repository.InventoryRepository;
+import com.inventoryhobbyservice.service.api.InventoryService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ import java.util.UUID;
 @Slf4j
 @AllArgsConstructor
 @Transactional
-public class InventoryServiceImpl implements InventoryService{
+public class InventoryServiceImpl implements InventoryService {
 
     private InventoryInfoRepository inventoryInfoRepository;
 
@@ -26,7 +27,7 @@ public class InventoryServiceImpl implements InventoryService{
 
     @Override
     public InventoryInfo addHobbyToInventory(InventoryInfo addInventoryHobby,Long idInventory) {
-        InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndSerialId(addInventoryHobby.getSerial_id(),
+        InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndSerialId(addInventoryHobby.getHobby_id(),
                 addInventoryHobby.getUser_inventory_id());
         if(inventoryInfoCheck==null){
             addInventoryHobby.setSerial_id(UUID.randomUUID());
