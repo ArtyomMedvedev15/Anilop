@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -32,6 +33,7 @@ public class InventoryServiceImpl implements InventoryService {
         InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndSerialId(addInventoryHobby.getHobby_id(),
                 addInventoryHobby.getUser_inventory_id());
         if(inventoryInfoCheck==null){
+            addInventoryHobby.setCreated(new Date());
             addInventoryHobby.setSerial_id(UUID.randomUUID());
             inventoryInfoRepository.save(addInventoryHobby);
             log.info("Add hobby to inventory user {}",addInventoryHobby);
@@ -74,6 +76,7 @@ public class InventoryServiceImpl implements InventoryService {
         if(inventoryIsExists.isPresent()){
             Inventory inventoryDomain = Inventory.builder()
                     .userId(inventoryRequest.getUserId())
+                    .created(new Date())
                     .build();
             log.info("Create inventory for user with id {}",inventoryRequest.getUserId());
             return getInventoryToDto(inventoryRepository.save(inventoryDomain));

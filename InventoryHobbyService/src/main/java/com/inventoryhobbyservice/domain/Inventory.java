@@ -25,8 +25,6 @@ public class Inventory {
 
     private Long userId;
 
-    private Date addedHobbyDate;
-
     @CreatedDate
     @Column(name = "created")
     private Date created;
