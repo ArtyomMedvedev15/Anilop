@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Create init script with data for tests and create test for last endpoint">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryCreateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryCreateResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" afterDir="false" />
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Refactor rest controller">
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/test/java/com/inventoryhobbyservice/service/InventoryServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/test/java/com/inventoryhobbyservice/service/InventoryServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +207,7 @@
       <workItem from="1667069905352" duration="2998000" />
       <workItem from="1667236808108" duration="3597000" />
       <workItem from="1667398343453" duration="7379000" />
-      <workItem from="1667645052241" duration="6126000" />
+      <workItem from="1667645052241" duration="6603000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -460,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667651421872</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Refactor rest controller">
+      <created>1667652298253</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1667652298253</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Author rest endpoint" />
     <MESSAGE value="Create dtos for hobbies and start refactor service" />
     <MESSAGE value="Fix log in controller and service" />
     <MESSAGE value="Test container configuration" />
@@ -503,7 +503,8 @@
     <MESSAGE value="Create endpoint for create inventory" />
     <MESSAGE value="Refactor domain inventory and service" />
     <MESSAGE value="Create init script with data for tests and create test for last endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create init script with data for tests and create test for last endpoint" />
+    <MESSAGE value="Refactor rest controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor rest controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

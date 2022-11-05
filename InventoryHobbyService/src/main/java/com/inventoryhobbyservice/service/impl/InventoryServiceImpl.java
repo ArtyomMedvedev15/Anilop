@@ -41,36 +41,36 @@ public class InventoryServiceImpl implements InventoryService {
                     .serial_id(UUID.randomUUID())
                     .build();
             inventoryInfoRepository.save(saveInventoryInfo);
-            log.info("Add hobby to inventory user {}", saveInventoryInfo);
+            log.info("{} Add hobby to inventory user {}", new Date(),saveInventoryInfo);
             return getInventoryInfoToDto(saveInventoryInfo);
         } else {
-            log.warn("Hobby already in inventory this user");
+            log.warn("{} Hobby already in inventory this user" , new Date());
             return null;
         }
     }
 
     @Override
     public Boolean deleteInventory(UUID serial_id, Long userInventoryId) {
-        Optional<Inventory> inventoryCheck = Optional.ofNullable(inventoryRepository.getByUserId(userInventoryId));
-        if (inventoryCheck.isPresent()) {
+        Optional<Inventory> inventoryUserCheck = Optional.ofNullable(inventoryRepository.getByUserId(userInventoryId));
+        if (inventoryUserCheck.isPresent()) {
             inventoryInfoRepository.deleteBySerialIdAndInventoryId(serial_id, inventoryRepository.getByUserId(userInventoryId).getId());
-            log.info("Hobby with serial id {} was deleted", serial_id);
+            log.info("{} Hobby with serial id {} was deleted",new Date(), serial_id);
             return true;
         } else {
-            log.info("Inventory with id {} doesn't exists", userInventoryId);
+            log.info("{} Inventory with id {} doesn't exists",new Date(), userInventoryId);
             return false;
         }
     }
 
     @Override
     public List<InventoryInfoResponse> findAllInventoryByUserInventoryId(Long userInventoryId) {
-        Optional<Inventory> inventoryCheck = Optional.ofNullable(inventoryRepository.getByUserId(userInventoryId));
-        if (inventoryCheck.isPresent()) {
-            List<InventoryInfo> inventoryInfoList = inventoryInfoRepository.findByUserInventoryId(inventoryRepository.getByUserId(userInventoryId).getId());
-            log.info("Find all hobby in inventory for user with id {}", userInventoryId);
-            return inventoryInfoList.stream().map(this::getInventoryInfoToDto).toList();
+        Optional<Inventory> inventoryUserCheck = Optional.ofNullable(inventoryRepository.getByUserId(userInventoryId));
+        if (inventoryUserCheck.isPresent()) {
+            List<InventoryInfo> inventoryHobbiesUser = inventoryInfoRepository.findByUserInventoryId(inventoryRepository.getByUserId(userInventoryId).getId());
+            log.info("{} Find all hobby in inventory for user with id {}",new Date(), userInventoryId);
+            return inventoryHobbiesUser.stream().map(this::getInventoryInfoToDto).toList();
         } else {
-            log.warn("Inventory with id {} doesn't exists", userInventoryId);
+            log.warn("{} Inventory with id {} doesn't exists",new Date(), userInventoryId);
             return null;
         }
     }
@@ -83,15 +83,16 @@ public class InventoryServiceImpl implements InventoryService {
                     .userId(inventoryCreateRequest.getUserId())
                     .created(new Date())
                     .build();
-            log.info("Create inventory for user with id {}", inventoryCreateRequest.getUserId());
+            log.info("{} Create inventory for user with id {}",new Date(), inventoryCreateRequest.getUserId());
             return getInventoryToDto(inventoryRepository.save(inventoryDomain));
         } else {
-            log.error("Inventory for user with id {} already created", inventoryCreateRequest.getUserId());
+            log.error("{} Inventory for user with id {} already created", new Date(),inventoryCreateRequest.getUserId());
             return null;
         }
     }
 
     private InventoryInfoResponse getInventoryInfoToDto(InventoryInfo info) {
+        log.info("{} Map Inventory Info domain to Inventory info response DTO", new Date());
         return InventoryInfoResponse.builder()
                 .id(info.getId())
                 .userInventoryId(info.getUser_inventory_id())
@@ -101,6 +102,7 @@ public class InventoryServiceImpl implements InventoryService {
     }
 
     private InventoryCreateResponse getInventoryToDto(Inventory inventory) {
+        log.info("{} Map Inventory Info domain to Inventory info create respones DTO", new Date());
         return InventoryCreateResponse.builder()
                 .id(inventory.getId())
                 .userId(inventory.getUserId())
