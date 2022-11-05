@@ -2,9 +2,7 @@ package com.inventoryhobbyservice.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.inventoryhobbyservice.dto.InventoryInfoDeleteRequest;
-import com.inventoryhobbyservice.dto.InventoryInfoRequest;
-import com.inventoryhobbyservice.dto.InventoryInfoResponse;
-import com.inventoryhobbyservice.dto.InventoryRequest;
+import com.inventoryhobbyservice.dto.InventoryCreateRequest;
 import com.inventoryhobbyservice.repository.InventoryInfoRepository;
 import com.inventoryhobbyservice.repository.InventoryRepository;
 import org.junit.jupiter.api.Test;
@@ -127,10 +125,10 @@ class InventoryServiceImplTest {
 
     @Test
     void CreateUserInventory_WithStatus200() throws Exception {
-        InventoryRequest inventoryRequest = InventoryRequest.builder()
+        InventoryCreateRequest inventoryCreateRequest = InventoryCreateRequest.builder()
                 .userId(3L)
                 .build();
-        String hobby_request_json = objectMapper.writeValueAsString(inventoryRequest);
+        String hobby_request_json = objectMapper.writeValueAsString(inventoryCreateRequest);
         this.mockMvc.perform(MockMvcRequestBuilders
                         .post("/api/v1/inventory/create")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -141,10 +139,10 @@ class InventoryServiceImplTest {
 
     @Test
     void CreateUserInventory_WithStatus400() throws Exception {
-        InventoryRequest inventoryRequest = InventoryRequest.builder()
+        InventoryCreateRequest inventoryCreateRequest = InventoryCreateRequest.builder()
                 .userId(777L)
                 .build();
-        String hobby_request_json = objectMapper.writeValueAsString(inventoryRequest);
+        String hobby_request_json = objectMapper.writeValueAsString(inventoryCreateRequest);
         this.mockMvc.perform(MockMvcRequestBuilders
                         .post("/api/v1/inventory/create")
                         .contentType(MediaType.APPLICATION_JSON)

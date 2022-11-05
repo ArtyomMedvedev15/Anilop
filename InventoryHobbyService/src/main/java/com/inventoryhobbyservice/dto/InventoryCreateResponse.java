@@ -11,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class InventoryResponse {
+public class InventoryCreateResponse {
     private Long id;
     private Long userId;
     private Date created;
