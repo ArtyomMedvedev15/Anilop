@@ -4,11 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Init commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/anilopservices/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/anilopservices/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +13,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,32 +33,141 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hobbiesservice.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="U:\Work\Anilop\InventoryHobbyService\src\main\resources" />
+      <recent name="U:\Work\Anilop\AuthorService\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.inventoryhobbyservice.service.impl" />
+      <recent name="com.inventoryhobbyservice.service" />
+      <recent name="com.hobbiesservice.service.implementation" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.inventoryhobbyservice.domain" />
+      <recent name="domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.InventoryServiceImplTest">
+    <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.CreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="CreateUserInventory_WithStatus200" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.CreateUserInventory_WithStatus400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="CreateUserInventory_WithStatus400" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.DeleteHobbyFromInventoryUser_WithStatusBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="DeleteHobbyFromInventoryUser_WithStatusBadRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.СreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="СreateUserInventory_WithStatus200" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppMainAuthorsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="AuthorService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.authorsservice.AppMainAuthorsService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppMainInventoyHobbyService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="InventoryHobbyService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.inventoryhobbyservice.AppMainInventoyHobbyService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InventoryServiceImplTest" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.СreateUserInventory_WithStatus200" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.DeleteHobbyFromInventoryUser_WithStatusBadRequest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="" />
       <created>1663612562151</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1663612566808" duration="2077000" />
-    </task>
-    <task id="LOCAL-00001" summary="Init commit">
-      <created>1663612813876</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663612813876</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,7 +185,5 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init commit" />
   </component>
 </project>
