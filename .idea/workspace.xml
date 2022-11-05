@@ -4,8 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Refactor rest controller">
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,18 +13,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="package-info" />
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="JUnit5 Test Class" />
+
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="auth_with_api_key" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,30 +33,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;U:/Work/Anilop/InventoryHobbyService/src/main/resources&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;2715d3f4f5658d3995cfa534159eafa0&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -194,274 +163,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Hobby service api" />
       <created>1663612562151</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663612562151</updated>
-      <workItem from="1666274235367" duration="6404000" />
-      <workItem from="1666519470279" duration="4138000" />
-      <workItem from="1666537780802" duration="5702000" />
-      <workItem from="1666634275811" duration="3548000" />
-      <workItem from="1666967027632" duration="12880000" />
-      <workItem from="1667069905352" duration="2998000" />
-      <workItem from="1667236808108" duration="3597000" />
-      <workItem from="1667398343453" duration="7379000" />
-      <workItem from="1667645052241" duration="6603000" />
-    </task>
-    <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
-      <created>1666200847446</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1666200847446</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Base entity created">
-      <created>1666201516872</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1666201516872</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Hobby repository created">
-      <created>1666201622383</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1666201622383</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Hobby service api">
-      <created>1666201966755</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1666201966755</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Hobby service implementation">
-      <created>1666274862135</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1666274862135</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Hobby rest api and application properties">
-      <created>1666275308660</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1666275308660</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Create domain in author service">
-      <created>1666275825801</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1666275825801</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Author repository create">
-      <created>1666275876923</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1666275876923</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Author service api create">
-      <created>1666276036239</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1666276036239</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Author service implementation">
-      <created>1666276554359</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1666276554359</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Author rest endpoint">
-      <created>1666276949821</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1666276949821</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Create dtos for hobbies and start refactor service">
-      <created>1666285313515</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1666285313515</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Fix log in controller and service">
-      <created>1666520758289</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1666520758289</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Test container configuration">
-      <created>1666521832856</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1666521832856</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Test for create and update endpoints">
-      <created>1666540059750</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1666540059750</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Create endpoint and test for get by id">
-      <created>1666541259760</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1666541259760</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Create delete endpoint and test">
-      <created>1666541831220</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1666541831220</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Create test for getAllhobbies endpoint">
-      <created>1666542330778</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1666542330778</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Create find by name endpoint and test">
-      <created>1666543437451</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1666543437451</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Create find by type endpoint and test">
-      <created>1666636683126</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1666636683126</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Create find by author id endpoint and test">
-      <created>1666637376637</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1666637376637</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Postman collection">
-      <created>1666637454207</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1666637454207</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Create inventory hobby service and domain">
-      <created>1666971401113</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1666971401113</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Create repository">
-      <created>1666971468523</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1666971468523</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Modify domains structure">
-      <created>1666974601319</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1666974601319</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Add hobby to inventory user">
-      <created>1666976531659</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1666976531659</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Find all hobby by user id">
-      <created>1666977449521</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1666977449521</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Delete hobby from inventory user and refactor domains">
-      <created>1667072846490</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1667072846491</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Refactor inventory controller">
-      <created>1667237635280</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1667237635280</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Refactor repository">
-      <created>1667399033855</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1667399033855</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Dto for inventory create endpoint">
-      <created>1667399322258</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1667399322258</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Create method for create inventory">
-      <created>1667399944097</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1667399944097</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Create endpoint for create inventory">
-      <created>1667400055831</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1667400055831</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Refactor domain inventory and service">
-      <created>1667400225908</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1667400225908</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Create init script with data for tests and create test for last endpoint">
-      <created>1667651421872</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1667651421872</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Refactor rest controller">
-      <created>1667652298253</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1667652298253</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,43 +185,5 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create dtos for hobbies and start refactor service" />
-    <MESSAGE value="Fix log in controller and service" />
-    <MESSAGE value="Test container configuration" />
-    <MESSAGE value="Test for create and update endpoints" />
-    <MESSAGE value="Create endpoint and test for get by id" />
-    <MESSAGE value="Create delete endpoint and test" />
-    <MESSAGE value="Create test for getAllhobbies endpoint" />
-    <MESSAGE value="Create find by name endpoint and test" />
-    <MESSAGE value="Create find by type endpoint and test" />
-    <MESSAGE value="Create find by author id endpoint and test" />
-    <MESSAGE value="Postman collection" />
-    <MESSAGE value="Create inventory hobby service and domain" />
-    <MESSAGE value="Create repository" />
-    <MESSAGE value="Modify domains structure" />
-    <MESSAGE value="Add hobby to inventory user" />
-    <MESSAGE value="Find all hobby by user id" />
-    <MESSAGE value="Delete hobby from inventory user and refactor domains" />
-    <MESSAGE value="Refactor inventory controller" />
-    <MESSAGE value="Refactor repository" />
-    <MESSAGE value="Dto for inventory create endpoint" />
-    <MESSAGE value="Create method for create inventory" />
-    <MESSAGE value="Create endpoint for create inventory" />
-    <MESSAGE value="Refactor domain inventory and service" />
-    <MESSAGE value="Create init script with data for tests and create test for last endpoint" />
-    <MESSAGE value="Refactor rest controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor rest controller" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Anilop$HobbyServiceImplTest.ic" NAME="HobbyServiceImplTest Coverage Results" MODIFIED="1666967841952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.hobbiesservice.service.implementation.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Anilop$InventoryServiceImplTest.ic" NAME="InventoryServiceImplTest Coverage Results" MODIFIED="1667651305268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.inventoryhobbyservice.service.*</FILTER>
-    </SUITE>
   </component>
 </project>
