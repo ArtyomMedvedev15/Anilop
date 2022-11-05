@@ -2,17 +2,17 @@ package com.inventoryhobbyservice.service.impl;
 
 import com.inventoryhobbyservice.domain.Inventory;
 import com.inventoryhobbyservice.domain.InventoryInfo;
-import com.inventoryhobbyservice.dto.InventoryInfoRequest;
-import com.inventoryhobbyservice.dto.InventoryInfoResponse;
-import com.inventoryhobbyservice.dto.InventoryCreateRequest;
-import com.inventoryhobbyservice.dto.InventoryCreateResponse;
+import com.inventoryhobbyservice.dto.*;
 import com.inventoryhobbyservice.repository.InventoryInfoRepository;
 import com.inventoryhobbyservice.repository.InventoryRepository;
 import com.inventoryhobbyservice.service.api.InventoryService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.Date;
 import java.util.List;
@@ -21,19 +21,29 @@ import java.util.UUID;
 
 @Service
 @Slf4j
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Transactional
 public class InventoryServiceImpl implements InventoryService {
 
-    private InventoryInfoRepository inventoryInfoRepository;
+    private final InventoryInfoRepository inventoryInfoRepository;
+    private final WebClient webClient;
+    private final InventoryRepository inventoryRepository;
 
-    private InventoryRepository inventoryRepository;
+    @Value("${hobbyservice.url}")
+    private String hobby_service_url;
 
     @Override
     public InventoryInfoResponse addHobbyToInventory(InventoryInfoRequest inventoryInfoRequestDto, Long idInventory) {
         InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndHobbyId(inventoryInfoRequestDto.getHobbyInventoryId(),
                 inventoryRepository.getByUserId(idInventory).getId());
-        if (inventoryInfoCheck == null) {
+
+        HobbyResponse hobbyResponse = webClient.get()
+                .uri(hobby_service_url+"/"+inventoryInfoRequestDto.getHobbyInventoryId())
+                .retrieve()
+                .bodyToMono(HobbyResponse.class)
+                .block();
+
+        if (inventoryInfoCheck == null && hobbyResponse!=null) {
             InventoryInfo saveInventoryInfo = InventoryInfo.builder()
                     .hobby_id(inventoryInfoRequestDto.getHobbyInventoryId())
                     .user_inventory_id(inventoryRepository.getByUserId(idInventory).getId())
@@ -41,7 +51,7 @@ public class InventoryServiceImpl implements InventoryService {
                     .serial_id(UUID.randomUUID())
                     .build();
             inventoryInfoRepository.save(saveInventoryInfo);
-            log.info("{} Add hobby to inventory user {}", new Date(),saveInventoryInfo);
+            log.info("{} Add hobby with name {} to inventory user {}", new Date(),hobbyResponse.getName(),saveInventoryInfo);
             return getInventoryInfoToDto(saveInventoryInfo);
         } else {
             log.warn("{} Hobby already in inventory this user" , new Date());

@@ -3,14 +3,32 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Fix workspace.xml">
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/HobbyResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
-      <list />
+      <list>
+        <option value="Class" />
+      </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map />
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -23,6 +41,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "spring.configuration.checksum": "2715d3f4f5658d3995cfa534159eafa0"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.hobbiesservice.dto" />
@@ -40,11 +70,12 @@
       <recent name="com.hobbiesservice.service.implementation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.inventoryhobbyservice.dto" />
       <recent name="com.inventoryhobbyservice.domain" />
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
+  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -157,11 +188,20 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task" />
-    <created>1663612562151</created>
-    <option name="number" value="Default" />
-    <option name="presentableId" value="Default" />
-    <updated>1663612562151</updated>
+    <task active="true" id="Default" summary="Default task">
+      <created>1667653599346</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667653599346</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Fix workspace.xml">
+      <created>1667653599346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667653599346</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,5 +217,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix workspace.xml" />
   </component>
 </project>
