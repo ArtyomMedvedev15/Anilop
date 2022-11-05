@@ -12,6 +12,7 @@
         <module>HobbiesService</module>
         <module>AuthorService</module>
         <module>InventoryHobbyService</module>
+        <module>ServiceDiscovery</module>
     </modules>
 
     <properties>
