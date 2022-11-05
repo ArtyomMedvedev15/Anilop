@@ -2,7 +2,6 @@ package com.inventoryhobbyservice.rest;
 
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.*;
-import com.inventoryhobbyservice.repository.InventoryRepository;
 import com.inventoryhobbyservice.service.api.InventoryService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,20 +32,20 @@ public class InventoryHobbyController {
     }
 
 
-    @GetMapping("/addtoinventory/{idinventory}/{idhobby}")
-    public ResponseEntity<InventoryInfo>addHobbyToInventory(@PathVariable("idinventory")Long idinventory,
+    @GetMapping("/addtoinventory/{userId}/{idhobby}")
+    public ResponseEntity<InventoryInfo>addHobbyToInventory(@PathVariable("userId")Long userId,
                                                             @PathVariable("idhobby")Long idhobby){
         InventoryInfo inventoryInfoFromDto = InventoryInfo.builder()
-                .user_inventory_id(idinventory)
+                .user_inventory_id(userId)
                 .hobby_id(idhobby)
                 .build();
-        InventoryInfo inventoryInfoResponse = inventoryService.addHobbyToInventory(inventoryInfoFromDto,idinventory);
+        InventoryInfo inventoryInfoResponse = inventoryService.addHobbyToInventory(inventoryInfoFromDto,userId);
 
         if(inventoryInfoResponse!=null) {
-            log.info("Add hobby to inventory with id inventory{}",idinventory);
+            log.info("Add hobby to inventory with id user{}",userId);
             return ResponseEntity.ok().body(inventoryInfoResponse);
         }else{
-            log.error("This hobby already in inventory {}",idinventory);
+            log.error("This hobby already in user id {}",userId);
             return ResponseEntity.badRequest().body(null);
 
         }
@@ -66,12 +65,12 @@ public class InventoryHobbyController {
 
     @DeleteMapping("/delete")
     public ResponseEntity<Void>deleteInventoryInfo(@RequestBody InventoryInfoDeleteRequest inventoryInfoDeleteRequest){
-        Boolean isDelete = inventoryService.deleteInventory(inventoryInfoDeleteRequest.getSerial_id(), inventoryInfoDeleteRequest.getUserInventoryId());
+        Boolean isDelete = inventoryService.deleteInventory(inventoryInfoDeleteRequest.getSerial_id(), inventoryInfoDeleteRequest.getUserId());
         if(isDelete) {
             log.warn("Hobby with id {} was delete from inventory",inventoryInfoDeleteRequest.getSerial_id());
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }else{
-            log.error("Inventory with id {} doesn't exists",inventoryInfoDeleteRequest.getUserInventoryId());
+            log.error("Inventory with id {} doesn't exists",inventoryInfoDeleteRequest.getUserId());
             return ResponseEntity.badRequest().body(null);
         }
     }

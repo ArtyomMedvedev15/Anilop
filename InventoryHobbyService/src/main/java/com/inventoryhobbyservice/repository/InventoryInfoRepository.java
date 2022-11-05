@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public interface InventoryInfoRepository extends JpaRepository<InventoryInfo, Long> {
     @Query("select ih from InventoryInfo ih where ih.user_inventory_id=:user_inventory_id and ih.hobby_id=:hobby_id")
-    InventoryInfo findByUserIdAndSerialId(@Param("hobby_id") Long hobby_id, @Param("user_inventory_id") Long user_inventory_id);
+    InventoryInfo findByUserIdAndHobbyId(@Param("hobby_id") Long hobby_id, @Param("user_inventory_id") Long user_inventory_id);
 
     @Query("select ih from InventoryInfo ih where ih.serial_id=:serial_id")
     InventoryInfo findBySerialId(@Param("serial_id") UUID serial_id);
@@ -19,7 +19,7 @@ public interface InventoryInfoRepository extends JpaRepository<InventoryInfo, Lo
     @Query("select ih from InventoryInfo ih where ih.user_inventory_id=:user_inventory_id")
     List<InventoryInfo>findByUserInventoryId(@Param("user_inventory_id") Long user_inventory_id);
     @Modifying
-    @Query("delete from InventoryInfo where serial_id=:serial_id")
-    void deleteBySerialId(@Param("serial_id") UUID serial_id);
+    @Query("delete from InventoryInfo where serial_id=:serial_id and user_inventory_id=:user_inventory_id")
+    void deleteBySerialIdAndInventoryId(@Param("serial_id") UUID serial_id, @Param("user_inventory_id")Long user_inventory_id);
 
 }

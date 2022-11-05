@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Dto for inventory create endpoint">
+    <list default="true" id="23e7506a-e59d-423e-89bc-84b32e5cc3c8" name="Changes" comment="Refactor domain inventory and service">
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/test/resources/sql/initData.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/domain/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryInfoDeleteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/dto/InventoryInfoDeleteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryInfoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/repository/InventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/api/InventoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/test/java/com/inventoryhobbyservice/service/InventoryServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/test/java/com/inventoryhobbyservice/service/InventoryServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/test/resources/sql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/test/resources/sql/init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +26,8 @@
         <option value="Enum" />
         <option value="package-info" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -85,6 +86,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.inventoryhobbyservice.service.impl" />
       <recent name="com.inventoryhobbyservice.service" />
       <recent name="com.hobbiesservice.service.implementation" />
     </key>
@@ -93,55 +95,8 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
-    <configuration name="HobbyServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HobbiesService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hobbiesservice.service.implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hobbiesservice.service.implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.hobbiesservice.service.implementation.HobbyServiceIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HobbyServiceIntegrationTest.FindHobbiesByAuthorId_WithStatus_200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HobbiesService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hobbiesservice.service.implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hobbiesservice.service.implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.hobbiesservice.service.implementation.HobbyServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="FindHobbiesByAuthorId_WithStatus_200" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HobbyServiceIntegrationTest.FindHobbiesByType_WithStatus_200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HobbiesService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hobbiesservice.service.implementation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hobbiesservice.service.implementation" />
-      <option name="MAIN_CLASS_NAME" value="com.hobbiesservice.service.implementation.HobbyServiceIntegrationTest" />
-      <option name="METHOD_NAME" value="FindHobbiesByType_WithStatus_200" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryServiceImplTest.addHobbyToInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InventoryServiceImplTest">
+    <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
         <pattern>
@@ -151,7 +106,70 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
       <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
-      <option name="METHOD_NAME" value="addHobbyToInventory" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.CreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="CreateUserInventory_WithStatus200" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.CreateUserInventory_WithStatus400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="CreateUserInventory_WithStatus400" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.DeleteHobbyFromInventoryUser_WithStatusBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="DeleteHobbyFromInventoryUser_WithStatusBadRequest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceImplTest.СreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="METHOD_NAME" value="СreateUserInventory_WithStatus200" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,19 +178,6 @@
     <configuration name="AppMainAuthorsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="AuthorService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.authorsservice.AppMainAuthorsService" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppMainHobbiesService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="HobbiesService" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hobbiesservice.AppMainHobbiesService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hobbiesservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InventoryServiceImplTest.addHobbyToInventory" />
-        <item itemvalue="JUnit.HobbyServiceIntegrationTest" />
-        <item itemvalue="JUnit.HobbyServiceIntegrationTest.FindHobbiesByType_WithStatus_200" />
-        <item itemvalue="JUnit.HobbyServiceIntegrationTest.FindHobbiesByAuthorId_WithStatus_200" />
-        <item itemvalue="Spring Boot.AppMainHobbiesService" />
+        <item itemvalue="JUnit.InventoryServiceImplTest" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.СreateUserInventory_WithStatus200" />
+        <item itemvalue="JUnit.InventoryServiceImplTest.DeleteHobbyFromInventoryUser_WithStatusBadRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +214,8 @@
       <workItem from="1666967027632" duration="12880000" />
       <workItem from="1667069905352" duration="2998000" />
       <workItem from="1667236808108" duration="3597000" />
-      <workItem from="1667398343453" duration="1576000" />
+      <workItem from="1667398343453" duration="7379000" />
+      <workItem from="1667645052241" duration="5185000" />
     </task>
     <task id="LOCAL-00001" summary="Add base dependencies for Hobbies">
       <created>1666200847446</created>
@@ -428,7 +434,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667399322258</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Create method for create inventory">
+      <created>1667399944097</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1667399944097</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Create endpoint for create inventory">
+      <created>1667400055831</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1667400055831</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Refactor domain inventory and service">
+      <created>1667400225908</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1667400225908</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,9 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create domain in author service" />
-    <MESSAGE value="Author repository create" />
-    <MESSAGE value="Author service api create" />
     <MESSAGE value="Author service implementation" />
     <MESSAGE value="Author rest endpoint" />
     <MESSAGE value="Create dtos for hobbies and start refactor service" />
@@ -471,7 +495,10 @@
     <MESSAGE value="Refactor inventory controller" />
     <MESSAGE value="Refactor repository" />
     <MESSAGE value="Dto for inventory create endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dto for inventory create endpoint" />
+    <MESSAGE value="Create method for create inventory" />
+    <MESSAGE value="Create endpoint for create inventory" />
+    <MESSAGE value="Refactor domain inventory and service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor domain inventory and service" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
@@ -480,6 +507,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Anilop$HobbyServiceImplTest.ic" NAME="HobbyServiceImplTest Coverage Results" MODIFIED="1666967841952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.hobbiesservice.service.implementation.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Anilop$InventoryServiceImplTest.ic" NAME="InventoryServiceImplTest Coverage Results" MODIFIED="1667650815295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.inventoryhobbyservice.service.*</FILTER>
     </SUITE>
   </component>
 </project>

@@ -13,5 +13,5 @@ import java.util.UUID;
 @Builder
 public class InventoryInfoDeleteRequest {
     private UUID serial_id;
-    private Long userInventoryId;
+    private Long userId;
 }
