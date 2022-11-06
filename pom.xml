@@ -13,6 +13,7 @@
         <module>AuthorService</module>
         <module>InventoryHobbyService</module>
         <module>ServiceDiscovery</module>
+        <module>ApiGateway</module>
     </modules>
 
     <properties>
