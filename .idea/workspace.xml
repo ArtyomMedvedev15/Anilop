@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add loadbalanced for webclient and set random port for authors-service">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add module apigateway">
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/AppApiGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e49aafe402eda6ea388f6e80f921ab1e&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "spring.configuration.checksum": "e49aafe402eda6ea388f6e80f921ab1e"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redshift",
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -74,7 +84,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
+  <component name="RunManager" selected="Spring Boot.AppApiGateway">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -122,18 +132,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceImplTest.СreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InventoryHobbyService" />
+    <configuration name="AppApiGateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ApiGateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.apigateway.AppApiGateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="PATTERN" value="com.apigateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
-      <option name="METHOD_NAME" value="СreateUserInventory_WithStatus200" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,19 +189,19 @@
       <item itemvalue="JUnit.InventoryServiceImplTest" />
       <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
       <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
-      <item itemvalue="JUnit.InventoryServiceImplTest.СreateUserInventory_WithStatus200" />
       <item itemvalue="Spring Boot.AppMainAuthorsService" />
       <item itemvalue="Spring Boot.AppMainHobbiesService" />
       <item itemvalue="Spring Boot.AppMainInventoyHobbyService" />
+      <item itemvalue="Spring Boot.AppApiGateway" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AppApiGateway" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="JUnit.InventoryServiceImplTest" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
-        <item itemvalue="JUnit.InventoryServiceImplTest.СreateUserInventory_WithStatus200" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +216,7 @@
       <workItem from="1667682415764" duration="2413000" />
       <workItem from="1667730831541" duration="1616000" />
       <workItem from="1667740054429" duration="2029000" />
-      <workItem from="1667755973894" duration="1216000" />
+      <workItem from="1667755973894" duration="3850000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -253,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667740682840</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add module apigateway">
+      <created>1667759481423</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667759481423</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +291,7 @@
     <MESSAGE value="Add eureka server" />
     <MESSAGE value="Add eureka client" />
     <MESSAGE value="Add name for services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add name for services" />
+    <MESSAGE value="Add module apigateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add module apigateway" />
   </component>
 </project>
