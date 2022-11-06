@@ -26,19 +26,16 @@ import java.util.UUID;
 public class InventoryServiceImpl implements InventoryService {
 
     private final InventoryInfoRepository inventoryInfoRepository;
-    private final WebClient webClient;
+    private final WebClient.Builder webClientBuilder;
     private final InventoryRepository inventoryRepository;
-
-    @Value("${hobbyservice.url}")
-    private String hobby_service_url;
 
     @Override
     public InventoryInfoResponse addHobbyToInventory(InventoryInfoRequest inventoryInfoRequestDto, Long idInventory) {
         InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndHobbyId(inventoryInfoRequestDto.getHobbyInventoryId(),
                 inventoryRepository.getByUserId(idInventory).getId());
 
-        HobbyResponse hobbyResponse = webClient.get()
-                .uri(hobby_service_url+"/"+inventoryInfoRequestDto.getHobbyInventoryId())
+        HobbyResponse hobbyResponse = webClientBuilder.build().get()
+                .uri("http://hobbies-service/api/v1/hobby/"+inventoryInfoRequestDto.getHobbyInventoryId())
                 .retrieve()
                 .bodyToMono(HobbyResponse.class)
                 .block();

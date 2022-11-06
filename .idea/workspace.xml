@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add eureka server">
-      <change beforePath="$PROJECT_DIR$/AuthorService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/AppMainAuthorsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/java/com/authorsservice/AppMainAuthorsService.java" afterDir="false" />
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add name for services">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMainHobbiesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/java/com/hobbiesservice/AppMainHobbiesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/AppMainInventoyHobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/AppMainInventoyHobbyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDiscovery/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDiscovery/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +52,9 @@
     &quot;spring.configuration.checksum&quot;: &quot;e49aafe402eda6ea388f6e80f921ab1e&quot;
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.hobbiesservice.dto" />
@@ -80,7 +77,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
+  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -144,21 +141,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppMainAuthorsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AppMainAuthorsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <option name="ACTIVE_PROFILES" />
       <module name="AuthorService" />
+      <selectedOptions>
+        <option name="environmentVariables" />
+      </selectedOptions>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.authorsservice.AppMainAuthorsService" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppMainHobbiesService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AppMainHobbiesService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <option name="ACTIVE_PROFILES" />
       <module name="HobbiesService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hobbiesservice.AppMainHobbiesService" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppMainInventoyHobbyService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="AppMainInventoyHobbyService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <option name="ACTIVE_PROFILES" />
       <module name="InventoryHobbyService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.inventoryhobbyservice.AppMainInventoyHobbyService" />
       <method v="2">
@@ -178,6 +181,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.InventoryServiceImplTest" />
+      <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
+      <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
+      <item itemvalue="JUnit.InventoryServiceImplTest.СreateUserInventory_WithStatus200" />
+      <item itemvalue="Spring Boot.AppMainAuthorsService" />
+      <item itemvalue="Spring Boot.AppMainHobbiesService" />
+      <item itemvalue="Spring Boot.AppMainInventoyHobbyService" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
@@ -198,7 +211,7 @@
       <updated>1667653599346</updated>
       <workItem from="1667682415764" duration="2413000" />
       <workItem from="1667730831541" duration="1616000" />
-      <workItem from="1667740054429" duration="432000" />
+      <workItem from="1667740054429" duration="2029000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -228,7 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667740113564</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add eureka client">
+      <created>1667740561065</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667740561065</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add name for services">
+      <created>1667740682840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667740682840</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +277,8 @@
     <MESSAGE value="Config webclient for connect to hobby service and get data from this service" />
     <MESSAGE value="Create new module, and config dependencies" />
     <MESSAGE value="Add eureka server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add eureka server" />
+    <MESSAGE value="Add eureka client" />
+    <MESSAGE value="Add name for services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add name for services" />
   </component>
 </project>
