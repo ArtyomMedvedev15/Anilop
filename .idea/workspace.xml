@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Config webclient for connect to hobby service and get data from this service">
-      <change afterPath="$PROJECT_DIR$/ServiceDiscovery/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Create new module, and config dependencies">
+      <change afterPath="$PROJECT_DIR$/ServiceDiscovery/src/main/java/com/discoveryservice/DiscoveryServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServiceDiscovery/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDiscovery/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDiscovery/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "spring.configuration.checksum": "519234a5002445835814f1467cbe645a"
+    "spring.configuration.checksum": "e49aafe402eda6ea388f6e80f921ab1e"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -74,7 +75,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
+  <component name="RunManager" selected="Spring Boot.DiscoveryServerApplication">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -122,22 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceImplTest.DeleteHobbyFromInventoryUser_WithStatusBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InventoryHobbyService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
-      <option name="METHOD_NAME" value="DeleteHobbyFromInventoryUser_WithStatusBadRequest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="InventoryServiceImplTest.СreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -175,13 +160,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ServiceDiscovery" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.discoveryservice.DiscoveryServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.discoveryservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="JUnit.InventoryServiceImplTest" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
         <item itemvalue="JUnit.InventoryServiceImplTest.СreateUserInventory_WithStatus200" />
-        <item itemvalue="JUnit.InventoryServiceImplTest.DeleteHobbyFromInventoryUser_WithStatusBadRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +191,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667653599346</updated>
-      <workItem from="1667682415764" duration="1069000" />
+      <workItem from="1667682415764" duration="2413000" />
+      <workItem from="1667730831541" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -209,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667682737859</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create new module, and config dependencies">
+      <created>1667683536111</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667683536111</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +235,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix workspace.xml" />
     <MESSAGE value="Config webclient for connect to hobby service and get data from this service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config webclient for connect to hobby service and get data from this service" />
+    <MESSAGE value="Create new module, and config dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new module, and config dependencies" />
   </component>
 </project>
