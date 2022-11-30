@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add module apigateway">
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/AppApiGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add dependencies for security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "spring.configuration.checksum": "e49aafe402eda6ea388f6e80f921ab1e"
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "bcbf7d3c5d0fa082d52780e205fb742f"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -197,11 +194,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AppApiGateway" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
-        <item itemvalue="JUnit.InventoryServiceImplTest" />
+        <item itemvalue="Spring Boot.AppApiGateway" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
+        <item itemvalue="JUnit.InventoryServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -217,6 +214,7 @@
       <workItem from="1667730831541" duration="1616000" />
       <workItem from="1667740054429" duration="2029000" />
       <workItem from="1667755973894" duration="3850000" />
+      <workItem from="1669812677419" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
