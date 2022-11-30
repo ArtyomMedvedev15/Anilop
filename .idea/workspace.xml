@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add dependencies for security">
+      <change afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppApiGateway">
+  <component name="RunManager" selected="Spring Boot.DiscoveryServerApplication">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -214,7 +216,7 @@
       <workItem from="1667730831541" duration="1616000" />
       <workItem from="1667740054429" duration="2029000" />
       <workItem from="1667755973894" duration="3850000" />
-      <workItem from="1669812677419" duration="791000" />
+      <workItem from="1669812677419" duration="2382000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -265,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667759481423</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add dependencies for security">
+      <created>1669815204297</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669815204297</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +299,7 @@
     <MESSAGE value="Add eureka client" />
     <MESSAGE value="Add name for services" />
     <MESSAGE value="Add module apigateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add module apigateway" />
+    <MESSAGE value="Add dependencies for security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dependencies for security" />
   </component>
 </project>
