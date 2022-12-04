@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add security config for api gateway">
-      <change afterPath="$PROJECT_DIR$/ServiceDiscovery/src/main/java/com/discoveryservice/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add security for eureka">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServiceDiscovery/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDiscovery/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postman/Anilop.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/postman/Anilop.postman_collection.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +38,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "bcbf7d3c5d0fa082d52780e205fb742f"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;bcbf7d3c5d0fa082d52780e205fb742f&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "redshift",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;redshift&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -87,7 +83,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DiscoveryServerApplication">
+  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -200,8 +196,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="Spring Boot.AppApiGateway" />
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
         <item itemvalue="JUnit.InventoryServiceImplTest" />
@@ -220,7 +216,8 @@
       <workItem from="1667730831541" duration="1616000" />
       <workItem from="1667740054429" duration="2029000" />
       <workItem from="1667755973894" duration="3850000" />
-      <workItem from="1669812677419" duration="4754000" />
+      <workItem from="1669812677419" duration="4781000" />
+      <workItem from="1670164689631" duration="1266000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -285,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669817199090</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add security for eureka">
+      <created>1669828383898</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669828383898</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +316,7 @@
     <MESSAGE value="Add module apigateway" />
     <MESSAGE value="Add dependencies for security" />
     <MESSAGE value="Add security config for api gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add security config for api gateway" />
+    <MESSAGE value="Add security for eureka" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add security for eureka" />
   </component>
 </project>

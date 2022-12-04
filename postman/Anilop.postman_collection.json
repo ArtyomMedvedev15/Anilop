@@ -13,7 +13,20 @@
 					"name": "Get all hobbies",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/hobbies",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"hobbies"
+							]
+						}
 					},
 					"response": []
 				},
@@ -81,15 +94,42 @@
 					"name": "Get hobby by id",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"6"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Delete hobby by id",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/delete/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"delete",
+								"5"
+							]
+						}
 					},
 					"response": []
 				},
@@ -97,7 +137,21 @@
 					"name": "Find hobbies by name",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/findbyname/z",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"findbyname",
+								"z"
+							]
+						}
 					},
 					"response": []
 				},
@@ -126,6 +180,692 @@
 				{
 					"name": "Find hobbies by author",
 					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/findbyauthorid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"findbyauthorid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory service",
+			"item": [
+				{
+					"name": "Add hobby to inventory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8383/api/v1/inventory/addtoinventory/123/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8383",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"addtoinventory",
+								"123",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all hobbies by user id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8383/api/v1/inventory/123",
+							"host": [
+								"localhost"
+							],
+							"port": "8383",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete hobbies from inventory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial_id\":\"168cfea1-615b-405b-bab3-8cba4fa2c41b\",\r\n    \"userId\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8383/api/v1/inventory/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "8383",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create inventory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8383/api/v1/inventory/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8383",
+							"path": [
+								"api",
+								"v1",
+								"inventory",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hobby service with auth",
+			"item": [
+				{
+					"name": "Get all hobbies",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmb1h0YXVyLWRaZWlZNnhRbThEcU05elk0cjIyMHJjSnhieVhpS251TW80In0.eyJleHAiOjE2Njk4MTY5NTcsImlhdCI6MTY2OTgxNjY1NywianRpIjoiNTQ5MGIzMGYtMDgxMi00OTQxLTk5ZDQtZjJkOTRkMzA0ODFkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9hbmlsb3AtbWljcm9zZXJ2aWNlcy1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI4MGMzZDljMS1kOWFiLTQ2OWQtOGI1Yy00MDNiNzhjYzY2NDEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhbmlsb3AtbWljcm9zZXJ2aWNlLWNsaWVudCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtYW5pbG9wLW1pY3Jvc2VydmljZXMtcmVhbG0iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyBwcm9maWxlIGVtYWlsIiwiY2xpZW50SG9zdCI6IjE3Mi4xNy4wLjEiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudElkIjoiYW5pbG9wLW1pY3Jvc2VydmljZS1jbGllbnQiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtYW5pbG9wLW1pY3Jvc2VydmljZS1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.dU8uxCXinkQMVhYsRb7LPeYIi_l5hEV8Dop9ccIFlPwTMYy9L6MKGSDg2rp9vLGn74eTvUjUxzypxCFErzsV1_LkwHlS4tXEUdaIrTdJaI2nA7tm7d78LifDxmYq4ZEVBeQT0qu-3lTw6K_fCCGcnNXA4MRBtQj5bRHBWaaWzMEsYlnXPzLGwkIcKw8d5e8hEgWeYVvyyUTKECo6hv3GivO-UA2d18RKggUs8_roV8TKd5YsOWASUVTKB6GaBiJKeffnaS-RrrZ6IWjG-GW-yKpmLG8b4R2jVUc6ze4FK8A-pwdUue-E63_VrdWRnI0VrJJuCDHV88b51vrDEwxljQ",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hobby/hobbies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"hobbies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test hobby1\",\r\n    \"describe\":\"Describe test\",\r\n    \"duration\":\"2022-10-23\",\r\n    \"logoPath\":\"Test logo\",\r\n    \"type\":\"SPORT\",\r\n    \"author_id\":1,\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hobby/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update hobby",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":6,\r\n    \"name\":\"Test updated 123\",\r\n    \"describe\":\"Describe test 13\",\r\n    \"duration\":\"2022-10-23\",\r\n    \"logoPath\":\"Test logo\",\r\n    \"type\":\"SPORT\",\r\n    \"author_id\":1,\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/hobby/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get hobby by id",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hobby/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete hobby by id",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "accessToken",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmb1h0YXVyLWRaZWlZNnhRbThEcU05elk0cjIyMHJjSnhieVhpS251TW80In0.eyJleHAiOjE2NzAxNjUyNDksImlhdCI6MTY3MDE2NDk0OSwianRpIjoiNGZhMDYyMmQtODk3NC00YzBjLTk1ODEtZGMzZmQ1NjAyYmE4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MTgxL3JlYWxtcy9hbmlsb3AtbWljcm9zZXJ2aWNlcy1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI4MGMzZDljMS1kOWFiLTQ2OWQtOGI1Yy00MDNiNzhjYzY2NDEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhbmlsb3AtbWljcm9zZXJ2aWNlLWNsaWVudCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtYW5pbG9wLW1pY3Jvc2VydmljZXMtcmVhbG0iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBvZmZsaW5lX2FjY2VzcyBwcm9maWxlIGVtYWlsIiwiY2xpZW50SG9zdCI6IjE3Mi4xNy4wLjEiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudElkIjoiYW5pbG9wLW1pY3Jvc2VydmljZS1jbGllbnQiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtYW5pbG9wLW1pY3Jvc2VydmljZS1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTcyLjE3LjAuMSJ9.Z2MrFh58npjpxi0YhwBxu91xj8SFZIsYtuJs1GoJLbjoF9JMCafTaPbIpg-9sDvkg5qegIcfPpDWnHJYHxspWRSoHzWi0CKZuq3zHx03_ORBSmKpLzWr5G3zyQ3QQ-i-SPKYOT_3JmX2u6ri29M1mencPuMaBhHJoWoubql_gDx90WgSuD-vAQZIjTahuwJ14ZUqVGHSEgZ5ynar73S_DfORpBG82V1937-lpv0-3vM1frIyKvz1rWfkaXcDcYEOeRLeNyR5OAuk3Nqmmm0J-zbzhNVRZ4grS3wgGydTUKYrp4iMuo6dED2y_1uHOEaGt7YVZcHPdcQu5biGCBRMxg",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hobby/delete/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"delete",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find hobbies by name",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8282/api/v1/hobby/findbyname/z",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"findbyname",
+								"z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find hobbies by type",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/hobby/findbytype/SPORT",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"hobby",
+								"findbytype",
+								"SPORT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find hobbies by author",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "cSufMIO3qFbPMNCOih7VYQ54svRFESXp",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "anilop-microservice-client",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "http://localhost:8181/realms/anilop-microservices-realm/protocol/openid-connect/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "openid offline_access",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
