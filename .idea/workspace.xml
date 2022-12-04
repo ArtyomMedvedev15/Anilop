@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add security for eureka">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add dependency for resilience4j">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/java/com/apigateway/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postman/Anilop.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/postman/Anilop.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="inter_service_communication" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -317,6 +317,7 @@
     <MESSAGE value="Add dependencies for security" />
     <MESSAGE value="Add security config for api gateway" />
     <MESSAGE value="Add security for eureka" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add security for eureka" />
+    <MESSAGE value="Add dependency for resilience4j" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dependency for resilience4j" />
   </component>
 </project>
