@@ -3,14 +3,18 @@ package com.inventoryhobbyservice.rest;
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.*;
 import com.inventoryhobbyservice.service.api.InventoryService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.bridge.Message;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/api/v1/inventory")
@@ -34,8 +38,10 @@ public class InventoryHobbyController {
 
 
     @GetMapping("/addtoinventory/{userId}/{idhobby}")
-    public ResponseEntity<InventoryInfoResponse>addHobbyToInventory(@PathVariable("userId")Long userId,
-                                                            @PathVariable("idhobby")Long idhobby){
+    @CircuitBreaker(name = "inventory",fallbackMethod = "AddHobbyFallbackMethod")
+    @Retry(name = "inventory")
+    public CompletableFuture<ResponseEntity<InventoryInfoResponse>>addHobbyToInventory(@PathVariable("userId")Long userId,
+                                                                                      @PathVariable("idhobby")Long idhobby){
         InventoryInfoRequest inventoryInfoFromDto = InventoryInfoRequest.builder()
                 .userInventoryId(userId)
                 .hobbyInventoryId(idhobby)
@@ -45,11 +51,15 @@ public class InventoryHobbyController {
 
         if(inventoryInfoResponse!=null) {
             log.info("{} Add hobby to inventory with id user {} with endpoint {}",new Date(),userId,"/addtoinventory");
-            return ResponseEntity.ok().body(inventoryInfoResponse);
+            return CompletableFuture.supplyAsync(()->ResponseEntity.ok().body(inventoryInfoResponse));
         }else{
             log.error("{} This hobby already in user id {} with endpoint {}",new Date(),userId,"/addtoinventory");
-            return ResponseEntity.badRequest().body(null);
+            return CompletableFuture.supplyAsync(()->ResponseEntity.badRequest().body(null));
         }
+    }
+
+    public CompletableFuture<ResponseEntity<?>> AddHobbyFallbackMethod( Long userId,Long idhobby, RuntimeException runtimeException){
+        return CompletableFuture.supplyAsync(()->ResponseEntity.badRequest().body("Something wrong with inventory service! Please try it again later."));
     }
 
     @GetMapping("/{userid}")
