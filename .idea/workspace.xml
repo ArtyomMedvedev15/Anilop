@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Configure resilience4j in property file">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add resilience4j to inventory service and config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/AppMainInventoyHobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/AppMainInventoyHobbyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,29 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "bcbf7d3c5d0fa082d52780e205fb742f"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;bcbf7d3c5d0fa082d52780e205fb742f&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "redshift",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;redshift&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -89,8 +89,20 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
-    <configuration name="AppApiGateway | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/AppApiGateway.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
+    <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InventoryHobbyService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
+      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="InventoryServiceImplTest.CreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
@@ -178,7 +190,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.AppApiGateway | #1" />
+      <item itemvalue="JUnit.InventoryServiceImplTest" />
       <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
       <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
       <item itemvalue="Spring Boot.AppMainAuthorsService" />
@@ -191,9 +203,9 @@
       <list>
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="Spring Boot.AppApiGateway" />
-        <item itemvalue="HTTP Request.AppApiGateway | #1" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
+        <item itemvalue="JUnit.InventoryServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +226,8 @@
       <workItem from="1670265468688" duration="5242000" />
       <workItem from="1670415083050" duration="256000" />
       <workItem from="1670427763644" duration="875000" />
-      <workItem from="1670525121276" duration="4388000" />
+      <workItem from="1670525121276" duration="5064000" />
+      <workItem from="1670606375145" duration="1235000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -293,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670177464396</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add resilience4j to inventory service and config">
+      <created>1670530292434</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670530292435</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +343,7 @@
     <MESSAGE value="Add security for eureka" />
     <MESSAGE value="Add dependency for resilience4j" />
     <MESSAGE value="Configure resilience4j in property file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure resilience4j in property file" />
+    <MESSAGE value="Add resilience4j to inventory service and config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add resilience4j to inventory service and config" />
   </component>
 </project>
