@@ -10,6 +10,8 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.sleuth.Span;
+import org.springframework.cloud.sleuth.Tracer;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -28,31 +30,39 @@ public class InventoryServiceImpl implements InventoryService {
     private final InventoryInfoRepository inventoryInfoRepository;
     private final WebClient.Builder webClientBuilder;
     private final InventoryRepository inventoryRepository;
-
+    private final Tracer tracer;
     @Override
     public InventoryInfoResponse addHobbyToInventory(InventoryInfoRequest inventoryInfoRequestDto, Long idInventory) {
         InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndHobbyId(inventoryInfoRequestDto.getHobbyInventoryId(),
                 inventoryRepository.getByUserId(idInventory).getId());
 
-        HobbyResponse hobbyResponse = webClientBuilder.build().get()
-                .uri("http://hobbies-service/api/v1/hobby/"+inventoryInfoRequestDto.getHobbyInventoryId())
-                .retrieve()
-                .bodyToMono(HobbyResponse.class)
-                .block();
+        Span hobbyServiceGetById = tracer.nextSpan().name("HobbyServiceGetById");
 
-        if (inventoryInfoCheck == null && hobbyResponse!=null) {
-            InventoryInfo saveInventoryInfo = InventoryInfo.builder()
-                    .hobby_id(inventoryInfoRequestDto.getHobbyInventoryId())
-                    .user_inventory_id(inventoryRepository.getByUserId(idInventory).getId())
-                    .created(new Date())
-                    .serial_id(UUID.randomUUID())
-                    .build();
-            inventoryInfoRepository.save(saveInventoryInfo);
-            log.info("{} Add hobby with name {} to inventory user {}", new Date(),hobbyResponse.getName(),saveInventoryInfo);
-            return getInventoryInfoToDto(saveInventoryInfo);
-        } else {
-            log.warn("{} Hobby already in inventory this user" , new Date());
-            return null;
+        try (Tracer.SpanInScope isGetById = tracer.withSpan(hobbyServiceGetById.start())) {
+            hobbyServiceGetById.tag("call", "hobbies-service");
+
+            HobbyResponse hobbyResponse = webClientBuilder.build().get()
+                    .uri("http://hobbies-service/api/v1/hobby/" + inventoryInfoRequestDto.getHobbyInventoryId())
+                    .retrieve()
+                    .bodyToMono(HobbyResponse.class)
+                    .block();
+
+            if (inventoryInfoCheck == null && hobbyResponse != null) {
+                InventoryInfo saveInventoryInfo = InventoryInfo.builder()
+                        .hobby_id(inventoryInfoRequestDto.getHobbyInventoryId())
+                        .user_inventory_id(inventoryRepository.getByUserId(idInventory).getId())
+                        .created(new Date())
+                        .serial_id(UUID.randomUUID())
+                        .build();
+                inventoryInfoRepository.save(saveInventoryInfo);
+                log.info("{} Add hobby with name {} to inventory user {}", new Date(), hobbyResponse.getName(), saveInventoryInfo);
+                return getInventoryInfoToDto(saveInventoryInfo);
+            } else {
+                log.warn("{} Hobby already in inventory this user", new Date());
+                return null;
+            }
+        }finally {
+            hobbyServiceGetById.end();
         }
     }
 
