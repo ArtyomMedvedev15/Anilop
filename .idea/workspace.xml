@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add resilience4j to inventory service and config">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Add dependencies for all modules for zipkin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthorService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HobbiesService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/HobbiesService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServiceDiscovery/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ServiceDiscovery/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +229,7 @@
       <workItem from="1670415083050" duration="256000" />
       <workItem from="1670427763644" duration="875000" />
       <workItem from="1670525121276" duration="5064000" />
-      <workItem from="1670606375145" duration="1235000" />
+      <workItem from="1670606375145" duration="2764000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -313,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670530292435</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add dependencies for all modules for zipkin">
+      <created>1670607822982</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670607822982</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +353,7 @@
     <MESSAGE value="Add dependency for resilience4j" />
     <MESSAGE value="Configure resilience4j in property file" />
     <MESSAGE value="Add resilience4j to inventory service and config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add resilience4j to inventory service and config" />
+    <MESSAGE value="Add dependencies for all modules for zipkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dependencies for all modules for zipkin" />
   </component>
 </project>
