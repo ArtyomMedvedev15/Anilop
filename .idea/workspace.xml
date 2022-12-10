@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Setup base property for sleuth and zipkin">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Custom span for zipkin">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
+  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
     <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -198,8 +198,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.AppApiGateway" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+        <item itemvalue="Spring Boot.AppApiGateway" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
         <item itemvalue="JUnit.InventoryServiceImplTest" />
@@ -224,7 +224,8 @@
       <workItem from="1670415083050" duration="256000" />
       <workItem from="1670427763644" duration="875000" />
       <workItem from="1670525121276" duration="5064000" />
-      <workItem from="1670606375145" duration="5496000" />
+      <workItem from="1670606375145" duration="6445000" />
+      <workItem from="1670708298560" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -324,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670609294491</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Custom span for zipkin">
+      <created>1670612623236</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670612623236</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +365,7 @@
     <MESSAGE value="Add resilience4j to inventory service and config" />
     <MESSAGE value="Add dependencies for all modules for zipkin" />
     <MESSAGE value="Setup base property for sleuth and zipkin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup base property for sleuth and zipkin" />
+    <MESSAGE value="Custom span for zipkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Custom span for zipkin" />
   </component>
 </project>
