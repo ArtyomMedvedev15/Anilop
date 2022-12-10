@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Custom span for zipkin">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Docker compose for kafka and zookeeper">
+      <change afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/event/HobbyInInventoryEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +228,7 @@
       <workItem from="1670427763644" duration="875000" />
       <workItem from="1670525121276" duration="5064000" />
       <workItem from="1670606375145" duration="6445000" />
-      <workItem from="1670708298560" duration="1079000" />
+      <workItem from="1670708298560" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -332,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670612623236</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Docker compose for kafka and zookeeper">
+      <created>1670709462255</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670709462255</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,6 +376,7 @@
     <MESSAGE value="Add dependencies for all modules for zipkin" />
     <MESSAGE value="Setup base property for sleuth and zipkin" />
     <MESSAGE value="Custom span for zipkin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom span for zipkin" />
+    <MESSAGE value="Docker compose for kafka and zookeeper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker compose for kafka and zookeeper" />
   </component>
 </project>

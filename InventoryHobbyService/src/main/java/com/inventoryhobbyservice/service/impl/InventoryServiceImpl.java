@@ -3,6 +3,7 @@ package com.inventoryhobbyservice.service.impl;
 import com.inventoryhobbyservice.domain.Inventory;
 import com.inventoryhobbyservice.domain.InventoryInfo;
 import com.inventoryhobbyservice.dto.*;
+ import com.inventoryhobbyservice.event.HobbyInventoryEvent;
 import com.inventoryhobbyservice.repository.InventoryInfoRepository;
 import com.inventoryhobbyservice.repository.InventoryRepository;
 import com.inventoryhobbyservice.service.api.InventoryService;
@@ -12,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.sleuth.Span;
 import org.springframework.cloud.sleuth.Tracer;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -31,6 +33,7 @@ public class InventoryServiceImpl implements InventoryService {
     private final WebClient.Builder webClientBuilder;
     private final InventoryRepository inventoryRepository;
     private final Tracer tracer;
+    private final KafkaTemplate<String, HobbyInventoryEvent> kafkaTemplate;
     @Override
     public InventoryInfoResponse addHobbyToInventory(InventoryInfoRequest inventoryInfoRequestDto, Long idInventory) {
         InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndHobbyId(inventoryInfoRequestDto.getHobbyInventoryId(),
@@ -55,6 +58,7 @@ public class InventoryServiceImpl implements InventoryService {
                         .serial_id(UUID.randomUUID())
                         .build();
                 inventoryInfoRepository.save(saveInventoryInfo);
+                kafkaTemplate.send("notificationTopic",new HobbyInventoryEvent(inventoryInfoCheck.getHobby_id()));
                 log.info("{} Add hobby with name {} to inventory user {}", new Date(), hobbyResponse.getName(), saveInventoryInfo);
                 return getInventoryInfoToDto(saveInventoryInfo);
             } else {
