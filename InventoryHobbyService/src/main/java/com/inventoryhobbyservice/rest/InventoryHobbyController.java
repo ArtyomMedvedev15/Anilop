@@ -40,7 +40,7 @@ public class InventoryHobbyController {
     @GetMapping("/addtoinventory/{userId}/{idhobby}")
     @CircuitBreaker(name = "inventory",fallbackMethod = "AddHobbyFallbackMethod")
     @Retry(name = "inventory")
-    public CompletableFuture<ResponseEntity<InventoryInfoResponse>>addHobbyToInventory(@PathVariable("userId")Long userId,
+    public ResponseEntity<InventoryInfoResponse>addHobbyToInventory(@PathVariable("userId")Long userId,
                                                                                       @PathVariable("idhobby")Long idhobby){
         InventoryInfoRequest inventoryInfoFromDto = InventoryInfoRequest.builder()
                 .userInventoryId(userId)
@@ -51,15 +51,15 @@ public class InventoryHobbyController {
 
         if(inventoryInfoResponse!=null) {
             log.info("{} Add hobby to inventory with id user {} with endpoint {}",new Date(),userId,"/addtoinventory");
-            return CompletableFuture.supplyAsync(()->ResponseEntity.ok().body(inventoryInfoResponse));
+            return ResponseEntity.ok().body(inventoryInfoResponse);
         }else{
             log.error("{} This hobby already in user id {} with endpoint {}",new Date(),userId,"/addtoinventory");
-            return CompletableFuture.supplyAsync(()->ResponseEntity.badRequest().body(null));
+            return ResponseEntity.badRequest().body(null);
         }
     }
 
-    public CompletableFuture<ResponseEntity<?>> AddHobbyFallbackMethod( Long userId,Long idhobby, RuntimeException runtimeException){
-        return CompletableFuture.supplyAsync(()->ResponseEntity.badRequest().body("Something wrong with inventory service! Please try it again later."));
+    public ResponseEntity<?> AddHobbyFallbackMethod( Long userId,Long idhobby, RuntimeException runtimeException){
+        return ResponseEntity.badRequest().body("Something wrong with inventory service! Please try it again later.");
     }
 
     @GetMapping("/{userid}")

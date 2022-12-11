@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Create main file and create kafka listener">
+    <list default="true" id="5164870a-f7e0-4e59-b638-3d549a275974" name="Changes" comment="Config properties for notification service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/rest/InventoryHobbyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/java/com/inventoryhobbyservice/service/impl/InventoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/InventoryHobbyService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotificationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NotificationService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,29 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;bcbf7d3c5d0fa082d52780e205fb742f&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "a8edae31bc694dc76f2c4e16f446fd39"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;redshift&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redshift",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -87,22 +91,7 @@
       <recent name="domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AppMainHobbiesService">
-    <configuration name="InventoryServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InventoryHobbyService" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.inventoryhobbyservice.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.inventoryhobbyservice.service" />
-      <option name="MAIN_CLASS_NAME" value="com.inventoryhobbyservice.service.InventoryServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.AppMainInventoyHobbyService">
     <configuration name="InventoryServiceImplTest.CreateUserInventory_WithStatus200" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InventoryHobbyService" />
       <extension name="coverage">
@@ -175,6 +164,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppNotificationService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="NotificationService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.notificationservice.AppNotificationService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.notificationservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="ServiceDiscovery" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.discoveryservice.DiscoveryServerApplication" />
@@ -189,22 +191,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.InventoryServiceImplTest" />
       <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
       <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
       <item itemvalue="Spring Boot.AppMainAuthorsService" />
       <item itemvalue="Spring Boot.AppMainHobbiesService" />
       <item itemvalue="Spring Boot.AppMainInventoyHobbyService" />
+      <item itemvalue="Spring Boot.AppNotificationService" />
       <item itemvalue="Spring Boot.AppApiGateway" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AppNotificationService" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="Spring Boot.AppApiGateway" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus400" />
         <item itemvalue="JUnit.InventoryServiceImplTest.CreateUserInventory_WithStatus200" />
-        <item itemvalue="JUnit.InventoryServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +229,8 @@
       <workItem from="1670427763644" duration="875000" />
       <workItem from="1670525121276" duration="5064000" />
       <workItem from="1670606375145" duration="6445000" />
-      <workItem from="1670708298560" duration="4648000" />
+      <workItem from="1670708298560" duration="8488000" />
+      <workItem from="1670716978557" duration="1378000" />
     </task>
     <task id="LOCAL-00001" summary="Fix workspace.xml">
       <created>1667653599346</created>
@@ -362,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670712126658</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Config properties for notification service">
+      <created>1670713015178</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670713015178</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +410,7 @@
     <MESSAGE value="Config kafka in inventory hobby service" />
     <MESSAGE value="Create notification service module and config dependencies" />
     <MESSAGE value="Create main file and create kafka listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create main file and create kafka listener" />
+    <MESSAGE value="Config properties for notification service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config properties for notification service" />
   </component>
 </project>

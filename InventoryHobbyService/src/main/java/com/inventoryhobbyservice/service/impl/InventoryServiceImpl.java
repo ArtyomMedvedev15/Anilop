@@ -39,11 +39,6 @@ public class InventoryServiceImpl implements InventoryService {
         InventoryInfo inventoryInfoCheck = inventoryInfoRepository.findByUserIdAndHobbyId(inventoryInfoRequestDto.getHobbyInventoryId(),
                 inventoryRepository.getByUserId(idInventory).getId());
 
-        Span hobbyServiceGetById = tracer.nextSpan().name("HobbyServiceGetById");
-
-        try (Tracer.SpanInScope isGetById = tracer.withSpan(hobbyServiceGetById.start())) {
-            hobbyServiceGetById.tag("call", "hobbies-service");
-
             HobbyResponse hobbyResponse = webClientBuilder.build().get()
                     .uri("http://hobbies-service/api/v1/hobby/" + inventoryInfoRequestDto.getHobbyInventoryId())
                     .retrieve()
@@ -58,16 +53,14 @@ public class InventoryServiceImpl implements InventoryService {
                         .serial_id(UUID.randomUUID())
                         .build();
                 inventoryInfoRepository.save(saveInventoryInfo);
-                kafkaTemplate.send("notificationTopic",new HobbyInventoryEvent(inventoryInfoCheck.getHobby_id()));
+                kafkaTemplate.send("notificationTopic",new HobbyInventoryEvent(inventoryInfoRequestDto.getHobbyInventoryId()));
                 log.info("{} Add hobby with name {} to inventory user {}", new Date(), hobbyResponse.getName(), saveInventoryInfo);
                 return getInventoryInfoToDto(saveInventoryInfo);
             } else {
                 log.warn("{} Hobby already in inventory this user", new Date());
                 return null;
             }
-        }finally {
-            hobbyServiceGetById.end();
-        }
+
     }
 
     @Override
